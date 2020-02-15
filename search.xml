@@ -11,6 +11,14 @@
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
       
       
+      <categories>
+          
+          <category> 前端 </category>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
       
     </entry>
     
@@ -23,6 +31,14 @@
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="中国人失掉自信力了吗"><a href="#中国人失掉自信力了吗" class="headerlink" title="中国人失掉自信力了吗"></a>中国人失掉自信力了吗</h1><div class="note danger">            <p>从公开的文字上看起来：两年以前，我们总自夸着“地大物博”，是事实；不久就不再自夸了，只希望着国联，也是事实；现在是既不夸自己，也不信国联，改为一味求神拜佛，怀古伤今了——却也是事实。</p><p>于是有人慨叹曰：中国人失掉自信力了.</p><p>如果单据这一点现象而论，自信其实是早就失掉了的。先前信“地”，信“物”，后来信“国联”，都没有相信过“自己”。假使这也算一种“信”，那也只能说中国人曾经有过“他信力”，自从对国联失望之后，便把这他信力都失掉了。<br>失掉了他信力，就会疑，一个转身，也许能够只相信了自己，倒是一条新生路，但不幸的是逐渐玄虚起来了。信“地”和“物”，还是切实的东西，国联就渺茫，不过这还可以令人不久就省悟到依赖它的不可靠。一到求神拜佛，可就玄虚之至了，有益或是有害，一时就找不出分明的结果来，它可以令人更长久的麻醉着自己。</p><p>中国人现在是在发展着“自欺力”。</p><p>“自欺”也并非现在的新东西，现在只不过日见其明显，笼罩了一切罢了。然而，在这笼罩之下，我们有并不失掉自信力的中国人在。<br>我们从古以来，就有埋头苦干的人，有拼命硬干的人，有为民请命的人，有舍身求法的人，……虽是等于为帝王将相作家谱的所谓“正史”，也往往掩不住他们的光耀，这就是中国的脊梁。</p><p>这一类的人们，就是现在也何尝少呢？他们有确信，不自欺；他们在前仆后继的战斗，不过一面总在被摧残，被抹杀，消灭于黑暗中，不能为大家所知道罢了。说中国人失掉了自信力，用以指一部分人则可，倘若加于全体，那简直是诬蔑。</p><p>要论中国人，必须不被搽在表面的自欺欺人的脂粉所诓骗，却看看他的筋骨和脊梁。自信力的有无，状元宰相的文章是不足为据的，要自己去看地底下。</p><p>九月二十五日</p>          </div>]]></content>
       
+      
+      <categories>
+          
+          <category> 小说 </category>
+          
+          <category> 鲁迅系列 </category>
+          
+      </categories>
       
       
         <tags>
@@ -74,6 +90,8 @@
       
       <categories>
           
+          <category> 前端 </category>
+          
           <category> CSS </category>
           
           <category> 基础知识 </category>
@@ -104,6 +122,8 @@
       
       
       <categories>
+          
+          <category> 前端 </category>
           
           <category> CSS </category>
           
@@ -136,6 +156,8 @@
       
       <categories>
           
+          <category> 前端 </category>
+          
           <category> CSS </category>
           
           <category> 基础知识 </category>
@@ -166,6 +188,8 @@
       
       
       <categories>
+          
+          <category> 前端 </category>
           
           <category> CSS </category>
           
@@ -228,6 +252,8 @@
       
       
       <categories>
+          
+          <category> 前端 </category>
           
           <category> CSS </category>
           
@@ -412,9 +438,9 @@
       
         <tags>
             
-            <tag> 计算机网络 </tag>
-            
             <tag> 子网分组转发 </tag>
+            
+            <tag> 计算机网络 </tag>
             
         </tags>
       
@@ -441,9 +467,9 @@
       
         <tags>
             
-            <tag> CRC循环冗余校验 </tag>
-            
             <tag> 计算机网络 </tag>
+            
+            <tag> CRC循环冗余校验 </tag>
             
         </tags>
       
@@ -675,6 +701,8 @@
       
       <categories>
           
+          <category> 前端 </category>
+          
           <category> JavaScript </category>
           
           <category> 基础知识 </category>
@@ -701,6 +729,8 @@
       
       
       <categories>
+          
+          <category> 前端 </category>
           
           <category> JavaScript </category>
           
