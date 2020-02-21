@@ -2,7 +2,7 @@
 body{
     margin: 0; /*外边距*/
     padding: 0; /*内边距*/
-    background-color: rgb(255, 255, 255); /*背景颜色*/
+    background-color: rgb(0, 0, 0); /*背景颜色*/
   }
   a{
     position: absolute; /*绝对对位*/
