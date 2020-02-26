@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chuyuxuan.xyz/"/>
-  <updated>2020-02-26T02:54:37.133Z</updated>
+  <updated>2020-02-26T14:36:36.724Z</updated>
   <id>https://chuyuxuan.xyz/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日常感慨</title>
+    <link href="https://chuyuxuan.xyz/2020/02/26/%E2%96%B6%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E6%84%9F%E6%85%A8%E4%B8%80%E4%B8%8B/"/>
+    <id>https://chuyuxuan.xyz/2020/02/26/%E2%96%B6%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/%E6%84%9F%E6%85%A8%E4%B8%80%E4%B8%8B/</id>
+    <published>2020-02-26T14:02:22.000Z</published>
+    <updated>2020-02-26T14:36:36.724Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="又日常作死的感慨一下"><a class="markdownIt-Anchor" href="#又日常作死的感慨一下"></a> 又日常作死的感慨一下。</h1><p>7点起来，第一件事就是想好今天要做什么，磨磨蹭蹭半天才想起，诶！我<code>概率论</code>还在挂着。于是悠哉游哉的起床<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="是的，我洗漱都懒得洗😪" ontouchstart>洗漱</span></span>。然而在挂念着什么时候开学的我知道现在写这篇感慨才知道今天又没有<strong>复习</strong>。<a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" data-fancybox="group" data-caption class="fancybox"><img alt data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" class="lazyload" title></a>。<code>今天又是充满希望的一天</code>就这样过去了。</p><h1 id="也不是什么也没做"><a class="markdownIt-Anchor" href="#也不是什么也没做"></a> 也不是什么也没做。</h1><p>拉拉扯扯学到<strong>Vue</strong>的axios库来了。对于小白的我这个无疑有一定的难度。所以也就照着视频勉勉强强的做了一个天气预报的网站。欸，这就纳闷了，你做这个做一天啊？是的，我是做了今天一天才拉拉扯扯的做了一个这么样的东西：<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/record_gif/20200226.gif" data-fancybox="group" data-caption class="fancybox"><img alt data-src="https://gitee.com/chuyuxuan/tuc/raw/master/record_gif/20200226.gif" class="lazyload" title></a></p><p><strong>总觉得自己有强迫症</strong> <s>没错你就是的</s>，自己搞个破动画 ，也就是这个logo：<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/record_gif/logo.gif" data-fancybox="group" data-caption class="fancybox"><img alt data-src="https://gitee.com/chuyuxuan/tuc/raw/master/record_gif/logo.gif" class="lazyload" title></a></p><p>便直接动用了 <code>AE ,PR , PS</code> ，🤪自己老喜欢扣这些不起眼的小细节而浪费大把时间。没错，这个动画从素材到完成花了我1一个小时不到<s>主要是中途逛逛小破绽啥的</s>。<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="是的，每当话说不连贯就用然后来凑" ontouchstart>然后</span></span> ，做 <strong>CSS</strong> 控制布局，欸！这里不能居中？为什么？啥啊啊，<code>div</code>没有<code>text-align</code>属性？ 于是又是<code>flaot</code>又是其他的东西一通复习<s>前面学的都忘了🤪</s>嗷嗷，纳鲁吼多！就这样除去逛破站的时间。差不多就花在这里了。<a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/hh026.gif" data-fancybox="group" data-caption class="fancybox"><img alt data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/hh026.gif" class="lazyload" title></a><br>不早了不早了，再碧碧赖赖就没时间记单词了，打卡不成功又要扣钱，明天全天砸在<code>概率论</code>！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
+      
+    
+    </summary>
+    
+    
+    
+      <category term="日常" scheme="https://chuyuxuan.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>作业3</title>
@@ -40,11 +64,11 @@
       <category term="课后作业" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/"/>
     
     
-      <category term="计算机图形学" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
-    
       <category term="线性代数基础" scheme="https://chuyuxuan.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E7%A1%80/"/>
     
       <category term="知识巩固" scheme="https://chuyuxuan.xyz/tags/%E7%9F%A5%E8%AF%86%E5%B7%A9%E5%9B%BA/"/>
+    
+      <category term="计算机图形学" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
   </entry>
   
@@ -595,36 +619,6 @@
       <category term="计算机网络" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
       <category term="子网分组转发" scheme="https://chuyuxuan.xyz/tags/%E5%AD%90%E7%BD%91%E5%88%86%E7%BB%84%E8%BD%AC%E5%8F%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5分钟让你明白CRC循环冗余校验</title>
-    <link href="https://chuyuxuan.xyz/2020/02/04/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/5%E5%88%86%E9%92%9F%E8%AE%A9%E4%BD%A0%E6%98%8E%E7%99%BDCRC%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C/"/>
-    <id>https://chuyuxuan.xyz/2020/02/04/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/5%E5%88%86%E9%92%9F%E8%AE%A9%E4%BD%A0%E6%98%8E%E7%99%BDCRC%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C/</id>
-    <published>2020-02-04T04:42:57.000Z</published>
-    <updated>2020-02-17T05:14:08.918Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="crc循环冗余校验"><a class="markdownIt-Anchor" href="#crc循环冗余校验"></a> CRC循环冗余校验</h2><iframe src="//player.bilibili.com/player.html?aid=82377367&cid=140943350&page=1" height="600" width="900" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><h4 id="以下来自百度百科"><a class="markdownIt-Anchor" href="#以下来自百度百科"></a> 以下来自<a href="https://baike.baidu.com/item/CRC/1453359?fr=aladdin" target="_blank" rel="noopener">百度百科</a>:</h4><ul><li>循环冗余校验（Cyclic Redundancy Check， CRC）是一种根据网络数据包或计算机文件等数据产生简短固定位数校验码的一种信道编码技术，主要用来检测或校验数据传输或者保存后可能出现的错误。它是利用除法及余数的原理来作错误侦测的。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="▶计算机网络" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="数据链路层" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/"/>
-    
-    
-      <category term="CRC循环冗余校验" scheme="https://chuyuxuan.xyz/tags/CRC%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C/"/>
-    
-      <category term="计算机网络" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
