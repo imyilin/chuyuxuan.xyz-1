@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://chuyuxuan.xyz/"/>
-  <updated>2020-02-26T14:45:46.048Z</updated>
+  <updated>2020-02-28T14:59:10.846Z</updated>
   <id>https://chuyuxuan.xyz/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为了博客也是操碎了心</title>
+    <link href="https://chuyuxuan.xyz/2020/02/28/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/Linux%E5%AE%89%E8%A3%85git/"/>
+    <id>https://chuyuxuan.xyz/2020/02/28/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/Linux%E5%AE%89%E8%A3%85git/</id>
+    <published>2020-02-28T10:49:35.000Z</published>
+    <updated>2020-02-28T14:59:10.846Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="起因"><a class="markdownIt-Anchor" href="#起因"></a> 起因</h1><p>诚然,我的博客采用的是<code>hexo farmework</code>，依托于<code>gitpage</code>而搭建的，对于国内的我来说很不友好。😖于是我在想啊，要不用CND加速？<strong>哈哈哈，蛮不错的</strong>。结果一查相关资料，顿时有点懵。</p><ul><li><p>我买了域名，但是<code>gitpage</code>依赖于GitHub，是属于国外的服务器的，所以我并不需要备案就可以用<a href="https://chuyuxuan.xyz">chuyuxuan.xyz</a>来访问我的博客。</p></li><li><p>而假如我想用国内的CDN加速我的资源，我的域名就必须要备案。备案你就得必须要有服务器。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" class="lazyload"></a></p></li></ul><p>好了，扯的有点远了，总之，能用技术解决的事情尽量用技术去解决。所以了了适应云主机，这里便采用虚拟机模拟了一个本地的服务器，为自己把博客部署到云端做准备。</p><h1 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h1><div class="note success">            <ol><li>VMware Workstation <a href="https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0?wd=&amp;eqid=9718f2bc000e9110000000065e58f46d" target="_blank" rel="noopener">点击下载</a></li><li>CentOS ISO <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1908.iso" target="_blank" rel="noopener">点击下载</a></li></ol><p><em>当然，可以自己百度搜索相关资源</em></p>          </div><h1 id="安装-vmware-和-建立centos虚拟机"><a class="markdownIt-Anchor" href="#安装-vmware-和-建立centos虚拟机"></a> 安装 <code>VMware</code> 和 建立<code>centOS</code>虚拟机</h1><p>这里我就不再演示了，是个人就会安装，实在不会百度。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/097.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/097.gif" class="lazyload"></a></p><h1 id="git服务端安装"><a class="markdownIt-Anchor" href="#git服务端安装"></a> git服务端安装</h1><h2 id="从yum安装git"><a class="markdownIt-Anchor" href="#从yum安装git"></a> 从<code>yum</code>安装git</h2><pre><code>yum install git-core</code></pre><h2 id="在需要的位置创建一个裸仓库"><a class="markdownIt-Anchor" href="#在需要的位置创建一个裸仓库"></a> 在需要的位置创建一个裸仓库</h2><pre><code>cd /usr/local mkdir gitcd gitgit init --bare demo.git</code></pre><h2 id="创建一个git用户并赋予密码"><a class="markdownIt-Anchor" href="#创建一个git用户并赋予密码"></a> 创建一个git用户并赋予密码</h2><pre><code>useradd gitpasswd git//输入密码大于8位，用于push和clone</code></pre><h2 id="赋予git用户权限"><a class="markdownIt-Anchor" href="#赋予git用户权限"></a> 赋予git用户权限</h2><p><code>chown</code>将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户ID；组可以是组名或者组ID；文件是以空格分开的要改变权限的文件列表，支持通配符。系统管理员经常使用chown命令，在将文件拷贝到另一个用户的名录下之后，让用户拥有使用该文件的权限。</p><pre><code>chown -R git:git demo.git //把权限赋给名字为git的用户</code></pre><h2 id="禁用git用户shell登录为了安全虽然我是在本地虚拟机上跑"><a class="markdownIt-Anchor" href="#禁用git用户shell登录为了安全虽然我是在本地虚拟机上跑"></a> 禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）</h2><pre><code>vim /etc/passwd//找到最后一行（一般都是的）// 敲 “i” 进行编辑git:x:1000:1000::/home/git:/usr/bin/git-shell//改成上面格式之后esc然后敲“：wq!”保存并退出</code></pre><p><strong>恭喜!服务端配置基本完成，接下来是客户端了。</strong></p><h1 id="git客户端安装"><a class="markdownIt-Anchor" href="#git客户端安装"></a> git客户端安装</h1><p><strong>这里百度去吧，很简单的，我采用的是window下的git服务，就直接下一步好了，这里给出下载地址：</strong><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">点击下载</a></p><h2 id="创建客户端用户"><a class="markdownIt-Anchor" href="#创建客户端用户"></a> 创建客户端用户</h2><p>安装好后桌面右键，<code>git Bush here</code>就可以进入shell.</p><pre><code>git config --global user.name &quot;你的名字&quot;git config --global user.email &quot;你的邮箱&quot;</code></pre><h2 id="创建密钥ssh不嫌麻烦的话可以不用配置"><a class="markdownIt-Anchor" href="#创建密钥ssh不嫌麻烦的话可以不用配置"></a> 创建密钥ssh(不嫌麻烦的话可以不用配置)</h2><pre><code>ssh-keygen -t rsa -C &quot;你的邮箱&quot;</code></pre><p>然后<strong>一直回车</strong>，直到完毕。</p><h2 id="将公钥加入服务器列表"><a class="markdownIt-Anchor" href="#将公钥加入服务器列表"></a> 将公钥加入服务器列表</h2><h3 id="取得本地ssh公钥"><a class="markdownIt-Anchor" href="#取得本地ssh公钥"></a> 取得本地ssh公钥</h3><pre><code>cd ~/.sshcat id_rsa.pub </code></pre><p>//复制，内容大概如下：</p><p>ssh-rsa AAAAfsefsdvdfhtrhytjfdvsrfwObDG7DcMMotWghtQNZnnO39FLzin+xMjcOGpwbi5PSRqUwVrq4So7uuQGz2xyLb3vjHYK3sdfefwefwfefdsfsG/Sk/HdQctvbIVo+NugXbgmopm2gdfg518aDuQ7w8nlPY3IvxTqH1U2ifsdfsegesKCCPf7QY/2HGI+nDbF+s6cCX4CIfdsgre5gfewICT82TmmqZLPWgYQv+4zNfsdfN+piS9Vfse55b+U… 你的邮箱</p><h3 id="添加到服务端"><a class="markdownIt-Anchor" href="#添加到服务端"></a> 添加到服务端</h3><p>默认列表在/root/.ssh/authorized_keys，使用vim 编辑此文件输入刚才复制的内容，保存退出。</p><pre><code>vi /root/.ssh/authorized_keys//i修改//esc后输入:wq保存退出</code></pre><h1 id="克隆远程项目到本地"><a class="markdownIt-Anchor" href="#克隆远程项目到本地"></a> 克隆远程项目到本地</h1><p>在自己的电脑上随便找个位置，<code>git Bush here</code>，</p><pre><code>git clone git@‘你服务器的IP地址’:/usr/local/git/demogit.git//例如： git clone git@111.111.111.111:/usr/local/git/demo.git</code></pre><h1 id="至此over"><a class="markdownIt-Anchor" href="#至此over"></a> 至此，over。</h1><p>当然，你可以push你自己的代码到服务器上，比方说把<code>hexo</code>静态博客push上去，实现本地访问。</p><h1 id="感慨"><a class="markdownIt-Anchor" href="#感慨"></a> 感慨</h1><p>花了我很久时间，大部分时间我在做无用功。。怪自己自学太慢了。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/087.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/087.gif" class="lazyload"></a></p><p>我在想自己还到底要不要用CDN加速哦。。。难搞难搞。。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="▶后端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%90%8E%E7%AB%AF/"/>
+    
+      <category term="Linux" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://chuyuxuan.xyz/tags/Linux/"/>
+    
+      <category term="centOS" scheme="https://chuyuxuan.xyz/tags/centOS/"/>
+    
+  </entry>
   
   <entry>
     <title>日常感慨</title>
@@ -591,36 +621,6 @@
       <category term="计算机网络" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
       <category term="距离向量路由算法" scheme="https://chuyuxuan.xyz/tags/%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E8%B7%AF%E7%94%B1%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2分钟让你了解子网分组转发</title>
-    <link href="https://chuyuxuan.xyz/2020/02/04/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%BD%91%E7%BB%9C%E5%B1%82/2%E5%88%86%E9%92%9F%E8%AE%A9%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%90%E7%BD%91%E5%88%86%E7%BB%84%E8%BD%AC%E5%8F%91/"/>
-    <id>https://chuyuxuan.xyz/2020/02/04/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%BD%91%E7%BB%9C%E5%B1%82/2%E5%88%86%E9%92%9F%E8%AE%A9%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%90%E7%BD%91%E5%88%86%E7%BB%84%E8%BD%AC%E5%8F%91/</id>
-    <published>2020-02-04T04:43:01.000Z</published>
-    <updated>2020-02-17T05:14:08.918Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="2分钟让你了解子网分组转发"><a class="markdownIt-Anchor" href="#2分钟让你了解子网分组转发"></a> 2分钟让你了解子网分组转发</h2><iframe src="//player.bilibili.com/player.html?aid=82559185&cid=141258242&page=1" height="600" width="900" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="▶计算机网络" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="网络层" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%BD%91%E7%BB%9C%E5%B1%82/"/>
-    
-    
-      <category term="计算机网络" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-      <category term="子网分组转发" scheme="https://chuyuxuan.xyz/tags/%E5%AD%90%E7%BD%91%E5%88%86%E7%BB%84%E8%BD%AC%E5%8F%91/"/>
     
   </entry>
   
