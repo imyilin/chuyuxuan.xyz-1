@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>IEDA配置Tomcat创建web项目 | Chuyuxuan</title><meta name="description" content="IEDA配置Tomcat创建web项目"><meta name="keywords" content="tomcat,IDEA,Java Web"><meta name="author" content="Chuyuxuan"><meta name="copyright" content="Chuyuxuan"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon2.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="http://ta.qq.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="IEDA配置Tomcat创建web项目"><meta name="twitter:description" content="IEDA配置Tomcat创建web项目"><meta name="twitter:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/cover.png"><meta property="og:type" content="article"><meta property="og:title" content="IEDA配置Tomcat创建web项目"><meta property="og:url" content="https://chuyuxuan0v0.github.io/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/"><meta property="og:site_name" content="Chuyuxuan"><meta property="og:description" content="IEDA配置Tomcat创建web项目"><meta property="og:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/cover.png"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script><!-- hexo-inject:begin --><!-- hexo-inject:end -->const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://chuyuxuan0v0.github.io/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/"><link rel="next" title="友链下的评论加载" href="https://chuyuxuan0v0.github.io/2020/04/13/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/hexo%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3/%E8%AF%84%E8%AE%BA%E5%8A%A0%E8%BD%BD/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6af004bb354c28578bb066736f9d6ce5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script src="http://tajs.qq.com/stats?sId=66514140" charset="UTF-8"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: Chuyuxuan","link":"链接: https://chuyuxuan0v0.github.io/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/","source":"来源: Chuyuxuan","info":"著作权归源作者所有，转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: true,
+  fancybox: true,
+  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#FFC1C1","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Chuyuxuan" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">Chuyuxuan</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/wuhan/"><i class="fa-fw fa fa-plus-circle"></i><span> 疫情相关</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于&amp;留言</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 更多</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fa fa-file-image-o"></i><span> 图片</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar1.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">55</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">71</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">10</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/wuhan/"><i class="fa-fw fa fa-plus-circle"></i><span> 疫情相关</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于&amp;留言</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 更多</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fa fa-file-image-o"></i><span> 图片</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#吐槽"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text"> 吐槽</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#安装"><span class="toc_mobile_items-number">2.</span> <span class="toc_mobile_items-text"> 安装</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#配置"><span class="toc_mobile_items-number">3.</span> <span class="toc_mobile_items-text"> 配置</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#运行"><span class="toc_mobile_items-number">4.</span> <span class="toc_mobile_items-text"> 运行</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#问题可能出现"><span class="toc_mobile_items-number">5.</span> <span class="toc_mobile_items-text"> 问题（可能出现）</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#吐槽"><span class="toc-number">1.</span> <span class="toc-text"> 吐槽</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装"><span class="toc-number">2.</span> <span class="toc-text"> 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#配置"><span class="toc-number">3.</span> <span class="toc-text"> 配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#运行"><span class="toc-number">4.</span> <span class="toc-text"> 运行</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#问题可能出现"><span class="toc-number">5.</span> <span class="toc-text"> 问题（可能出现）</span></a></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/cover.png)"><div id="post-info"><div id="post-title"><div class="posttitle">IEDA配置Tomcat创建web项目</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 发表于 2020-04-15<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新于 2020-04-15</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/">▶前端</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>阅读量:</span><span id="busuanzi_value_page_pv"></span><span class="post-meta__separator">|</span><i class="fa fa-comments-o post-meta__icon fa-fw" aria-hidden="true"></i><span>评论数:</span><a href="/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/" itemprop="commentCount"></span></a></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><h1 id="吐槽"><a class="markdownIt-Anchor" href="#吐槽"></a> 吐槽</h1>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><p>讲真，要不是学校要求学，我是不会碰<code>jsp</code>这项技术的。就类似于<a href="https://chuyuxuan.xyz/2020/04/06/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A5%E9%97%A8/" target="_blank" rel="noopener"><em>jQuery</em></a>一样。耦合性强，前后端不分离，这些不适合现在了。但听一些前辈们说仍然有一小部分公司还在用这项技术。当然，包括我们学校的官网。不过吐槽归吐槽，学分摆在那里，你不得不去写。什么？不想？不想学还看我这篇文章干嘛~</p>
+<a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/shakinghead.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="shakinghead " class="fancybox"><img alt="shakinghead " title="shakinghead " data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/shakinghead.png" class="lazyload"></a>
+<h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1>
+<ul>
+<li>下载<a href="https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.exe" target="_blank" rel="noopener"><em>Tomcat</em></a></li>
+</ul>
+<p>这里我是直接外链到<code>win10</code>环境直装的<code>tomcat 9.0</code>，如果你使用的是<code>MacOS</code>或者<code>Linux</code>。稍微抱歉一下。</p>
+<div class="note danger">
+            <p>注意，安装路径请确保你有足够的权限访问，否则后面会出现环境运行无权限。<font style="font-weight:bold;color:red;">建议默认安装在C盘。</font></p>
+          </div>
+<p>具体安装步骤我这里就不给出了，可以自行<a href="https://www.google.com" target="_blank" rel="noopener"><em>Google</em></a>。唯一要注意一点的是端口号没有特别的需求默认<code>8080</code>端口即可。</p>
+<h1 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h1>
+<ul>
+<li>我的IEDA版本是2019.1.3</li>
+</ul>
+<ol>
+<li>打开<code>IEDA</code>，新建一个<code>空项目</code>。并且给命名。</li>
+</ol>
+<p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/1.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/1.gif" class="lazyload"></a></p>
+<ol start="2">
+<li>创建好了JavaWeb项目要配置一下文件夹路径，首先在<code>web/WEB-INF</code>文件夹下面创建两个文件夹：<code>class</code>和<code>lib</code>.<code>class</code>用来存放编译后输出的<code>classes</code>文件，<code>lib</code>用于存放第三方的<code>jar</code>包。</li>
+</ol>
+<p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/2.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/2.gif" class="lazyload"></a></p>
+<ol start="3">
+<li><code>File</code>=&gt;<code>Project Structure</code>=&gt;<code>Module</code>=&gt;<code>Paths</code>=&gt;<code>Use module compile output path</code> ，点击后面的<code>...</code>将<code>Output path</code>和<code>Test output path</code>都选择刚刚创建的<code>class</code>文件夹,点击<code>Apply</code>。</li>
+</ol>
+<p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/3.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/3.gif" class="lazyload"></a></p>
+<ol start="4">
+<li>接着选择<code>Dependencies</code> ,将<code>Module SDK</code>选择为自己的<code>JDK</code>. 点击右边的<code>“+”</code>号 ,选择<code>Jars or Directories</code>。配置到刚刚创建好的<code>lib</code>文件中。</li>
+</ol>
+<p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/4.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/4.gif" class="lazyload"></a></p>
+<ol start="5">
+<li>打开菜单<code>Run</code> 选择<code>Edit Configuration</code>也可以点击右上方的往下的三角旁边的白框框选择<code>Edit Configuration</code>,点击<code>“+”</code>号选择<code>Tomcat Server</code>,选择<code>Local</code>。在<code>Name</code>处创建<code>Tomcat</code>名字，点击<code>Application server</code>后面的<code>Configure...</code>，弹出<code>Tomcat Server</code>窗口，选择本地安装的<code>Tomcat</code>文件路径. 设置<code>HTTP port</code>和<code>JMX port</code>（默认值即可），点击 <code>Apply</code>.</li>
+</ol>
+<p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/5.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/5.gif" class="lazyload"></a></p>
+<ol start="6">
+<li>至此Tomcat配置完成。 下一步在Tomcat中部署并运行项目 <code>Run</code> , <code>Edit Configurations</code>，进入<code>Run/Debug Configurations</code>窗口 ,选择刚刚建立的Tomcat容器,选择<code>Deployment</code>,点击右边的<code>“+”</code>号 ,选择<code>Artifact</code>,选择<code>web</code>项目,<code>Application contex</code>填一个名字。注意，tomcat的路径需要手动在<code>startup/Connection</code>中配置好。</li>
+</ol>
+<p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/6.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/6.gif" class="lazyload"></a></p>
+<h1 id="运行"><a class="markdownIt-Anchor" href="#运行"></a> 运行</h1>
+<ol start="7">
+<li>好啦！来运行项目看看！选择<code>index.jsp</code>，修改里面的代码内容，嘻嘻！成功运行！</li>
+</ol>
+<p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/7.gif" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/7.gif" class="lazyload"></a></p>
+<h1 id="问题可能出现"><a class="markdownIt-Anchor" href="#问题可能出现"></a> 问题（可能出现）</h1>
+<div class="note danger">
+            <p>注意，若出现：<code>Error running 'Tomcat 8.5.45': port out of range:-1 &amp;&amp; 淇℃伅 [main] org.apache.catalina</code>。</p><ul><li><p>请在<code>tomcat</code>安装目录下进入<code>conf/server.xml</code> ，把里面的<code>sever port = &quot;-1&quot;</code>改成1028（大于1024不等于8080即可）。</p></li><li><p>修改logging.properties 文件里面的<code>java.util.logging.ConsoleHandler.encoding = UTF-8</code>为<code>java.util.logging.ConsoleHandler.encoding = GBK</code></p></li></ul>
+          </div></div></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/tomcat/">tomcat    </a><a class="post-meta__tags" href="/tags/IDEA/">IDEA    </a><a class="post-meta__tags" href="/tags/Java-Web/">Java Web    </a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination_post" id="pagination"><div class="next-post pull-full"><a href="/2020/04/13/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/hexo%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3/%E8%AF%84%E8%AE%BA%E5%8A%A0%E8%BD%BD/"><img class="next_cover lazyload" data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/8356aa112b9aeee7e425fa519f25e334.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>友链下的评论加载</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = true == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'4VHYBgLfdjw6zhs1Ep46acMw-gzGzoHsz',
+  appKey:'t4eW4wzuDJuIU1McV0Ir9Dzq',
+  placeholder:'请输入您的昵称和邮箱~可以快速得到回复😛~',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'8',
+  lang:'zh-cn',
+  recordIP: true,
+  avatar_cdn: '{{ theme.valine.avatar_cdn }}',
+});</script></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By Chuyuxuan</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="footer_custom_text">Just run! Never stop!</div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="https://cdn.jsdelivr.net/npm/activate-power-mode/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true; 
+document.body.addEventListener('input', POWERMODE);
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body></html>
