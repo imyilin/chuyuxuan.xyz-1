@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://chuyuxuan.icu/"/>
+  <link href="https://chuyuxuan.xyz/"/>
   <updated>2020-04-15T11:14:47.466Z</updated>
-  <id>https://chuyuxuan.icu/</id>
+  <id>https://chuyuxuan.xyz/</id>
   
   <author>
     <name>Chuyuxuan</name>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>IEDA配置Tomcat创建web项目</title>
-    <link href="https://chuyuxuan.icu/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/"/>
-    <id>https://chuyuxuan.icu/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/</id>
+    <link href="https://chuyuxuan.xyz/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/"/>
+    <id>https://chuyuxuan.xyz/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/</id>
     <published>2020-04-15T04:30:00.000Z</published>
     <updated>2020-04-15T11:14:47.466Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="吐槽"><a class="markdownIt-Anchor" href="#吐槽"></a> 吐槽</h1><p>讲真，要不是学校要求学，我是不会碰<code>jsp</code>这项技术的。就类似于<a href="https://chuyuxuan.xyz/2020/04/06/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A5%E9%97%A8/" target="_blank" rel="noopener"><em>jQuery</em></a>一样。耦合性强，前后端不分离，这些不适合现在了。但听一些前辈们说仍然有一小部分公司还在用这项技术。当然，包括我们学校的官网。不过吐槽归吐槽，学分摆在那里，你不得不去写。什么？不想？不想学还看我这篇文章干嘛~</p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/shakinghead.png" data-fancybox="group" data-caption="shakinghead " class="fancybox"><img alt="shakinghead " title="shakinghead " data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/shakinghead.png" class="lazyload"></a><h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1><ul><li>下载<a href="https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.exe" target="_blank" rel="noopener"><em>Tomcat</em></a></li></ul><p>这里我是直接外链到<code>win10</code>环境直装的<code>tomcat 9.0</code>，如果你使用的是<code>MacOS</code>或者<code>Linux</code>。稍微抱歉一下。</p><div class="note danger">            <p>注意，安装路径请确保你有足够的权限访问，否则后面会出现环境运行无权限。<font style="font-weight:bold;color:red;">建议默认安装在C盘。</font></p>          </div><p>具体安装步骤我这里就不给出了，可以自行<a href="https://www.google.com" target="_blank" rel="noopener"><em>Google</em></a>。唯一要注意一点的是端口号没有特别的需求默认<code>8080</code>端口即可。</p><h1 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h1><ul><li>我的IEDA版本是2019.1.3</li></ul><ol><li>打开<code>IEDA</code>，新建一个<code>空项目</code>。并且给命名。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/1.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/1.gif" class="lazyload"></a></p><ol start="2"><li>创建好了JavaWeb项目要配置一下文件夹路径，首先在<code>web/WEB-INF</code>文件夹下面创建两个文件夹：<code>class</code>和<code>lib</code>.<code>class</code>用来存放编译后输出的<code>classes</code>文件，<code>lib</code>用于存放第三方的<code>jar</code>包。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/2.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/2.gif" class="lazyload"></a></p><ol start="3"><li><code>File</code>=&gt;<code>Project Structure</code>=&gt;<code>Module</code>=&gt;<code>Paths</code>=&gt;<code>Use module compile output path</code> ，点击后面的<code>...</code>将<code>Output path</code>和<code>Test output path</code>都选择刚刚创建的<code>class</code>文件夹,点击<code>Apply</code>。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/3.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/3.gif" class="lazyload"></a></p><ol start="4"><li>接着选择<code>Dependencies</code> ,将<code>Module SDK</code>选择为自己的<code>JDK</code>. 点击右边的<code>“+”</code>号 ,选择<code>Jars or Directories</code>。配置到刚刚创建好的<code>lib</code>文件中。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/4.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/4.gif" class="lazyload"></a></p><ol start="5"><li>打开菜单<code>Run</code> 选择<code>Edit Configuration</code>也可以点击右上方的往下的三角旁边的白框框选择<code>Edit Configuration</code>,点击<code>“+”</code>号选择<code>Tomcat Server</code>,选择<code>Local</code>。在<code>Name</code>处创建<code>Tomcat</code>名字，点击<code>Application server</code>后面的<code>Configure...</code>，弹出<code>Tomcat Server</code>窗口，选择本地安装的<code>Tomcat</code>文件路径. 设置<code>HTTP port</code>和<code>JMX port</code>（默认值即可），点击 <code>Apply</code>.</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/5.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/5.gif" class="lazyload"></a></p><ol start="6"><li>至此Tomcat配置完成。 下一步在Tomcat中部署并运行项目 <code>Run</code> , <code>Edit Configurations</code>，进入<code>Run/Debug Configurations</code>窗口 ,选择刚刚建立的Tomcat容器,选择<code>Deployment</code>,点击右边的<code>“+”</code>号 ,选择<code>Artifact</code>,选择<code>web</code>项目,<code>Application contex</code>填一个名字。注意，tomcat的路径需要手动在<code>startup/Connection</code>中配置好。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/6.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/6.gif" class="lazyload"></a></p><h1 id="运行"><a class="markdownIt-Anchor" href="#运行"></a> 运行</h1><ol start="7"><li>好啦！来运行项目看看！选择<code>index.jsp</code>，修改里面的代码内容，嘻嘻！成功运行！</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/7.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/7.gif" class="lazyload"></a></p><h1 id="问题可能出现"><a class="markdownIt-Anchor" href="#问题可能出现"></a> 问题（可能出现）</h1><div class="note danger">            <p>注意，若出现：<code>Error running 'Tomcat 8.5.45': port out of range:-1 &amp;&amp; 淇℃伅 [main] org.apache.catalina</code>。</p><ul><li><p>请在<code>tomcat</code>安装目录下进入<code>conf/server.xml</code> ，把里面的<code>sever port = &quot;-1&quot;</code>改成1028（大于1024不等于8080即可）。</p></li><li><p>修改logging.properties 文件里面的<code>java.util.logging.ConsoleHandler.encoding = UTF-8</code>为<code>java.util.logging.ConsoleHandler.encoding = GBK</code></p></li></ul>          </div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="吐槽"><a class="markdownIt-Anchor" href="#吐槽"></a> 吐槽</h1><p>讲真，要不是学校要求学，我是不会碰<code>jsp</code>这项技术的。就类似于<a href="https://chuyuxuan.xyz/2020/04/06/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A5%E9%97%A8/"><em>jQuery</em></a>一样。耦合性强，前后端不分离，这些不适合现在了。但听一些前辈们说仍然有一小部分公司还在用这项技术。当然，包括我们学校的官网。不过吐槽归吐槽，学分摆在那里，你不得不去写。什么？不想？不想学还看我这篇文章干嘛~</p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/shakinghead.png" data-fancybox="group" data-caption="shakinghead " class="fancybox"><img alt="shakinghead " title="shakinghead " data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/shakinghead.png" class="lazyload"></a><h1 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h1><ul><li>下载<a href="https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.exe" target="_blank" rel="noopener"><em>Tomcat</em></a></li></ul><p>这里我是直接外链到<code>win10</code>环境直装的<code>tomcat 9.0</code>，如果你使用的是<code>MacOS</code>或者<code>Linux</code>。稍微抱歉一下。</p><div class="note danger">            <p>注意，安装路径请确保你有足够的权限访问，否则后面会出现环境运行无权限。<font style="font-weight:bold;color:red;">建议默认安装在C盘。</font></p>          </div><p>具体安装步骤我这里就不给出了，可以自行<a href="https://www.google.com" target="_blank" rel="noopener"><em>Google</em></a>。唯一要注意一点的是端口号没有特别的需求默认<code>8080</code>端口即可。</p><h1 id="配置"><a class="markdownIt-Anchor" href="#配置"></a> 配置</h1><ul><li>我的IEDA版本是2019.1.3</li></ul><ol><li>打开<code>IEDA</code>，新建一个<code>空项目</code>。并且给命名。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/1.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/1.gif" class="lazyload"></a></p><ol start="2"><li>创建好了JavaWeb项目要配置一下文件夹路径，首先在<code>web/WEB-INF</code>文件夹下面创建两个文件夹：<code>class</code>和<code>lib</code>.<code>class</code>用来存放编译后输出的<code>classes</code>文件，<code>lib</code>用于存放第三方的<code>jar</code>包。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/2.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/2.gif" class="lazyload"></a></p><ol start="3"><li><code>File</code>=&gt;<code>Project Structure</code>=&gt;<code>Module</code>=&gt;<code>Paths</code>=&gt;<code>Use module compile output path</code> ，点击后面的<code>...</code>将<code>Output path</code>和<code>Test output path</code>都选择刚刚创建的<code>class</code>文件夹,点击<code>Apply</code>。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/3.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/3.gif" class="lazyload"></a></p><ol start="4"><li>接着选择<code>Dependencies</code> ,将<code>Module SDK</code>选择为自己的<code>JDK</code>. 点击右边的<code>“+”</code>号 ,选择<code>Jars or Directories</code>。配置到刚刚创建好的<code>lib</code>文件中。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/4.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/4.gif" class="lazyload"></a></p><ol start="5"><li>打开菜单<code>Run</code> 选择<code>Edit Configuration</code>也可以点击右上方的往下的三角旁边的白框框选择<code>Edit Configuration</code>,点击<code>“+”</code>号选择<code>Tomcat Server</code>,选择<code>Local</code>。在<code>Name</code>处创建<code>Tomcat</code>名字，点击<code>Application server</code>后面的<code>Configure...</code>，弹出<code>Tomcat Server</code>窗口，选择本地安装的<code>Tomcat</code>文件路径. 设置<code>HTTP port</code>和<code>JMX port</code>（默认值即可），点击 <code>Apply</code>.</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/5.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/5.gif" class="lazyload"></a></p><ol start="6"><li>至此Tomcat配置完成。 下一步在Tomcat中部署并运行项目 <code>Run</code> , <code>Edit Configurations</code>，进入<code>Run/Debug Configurations</code>窗口 ,选择刚刚建立的Tomcat容器,选择<code>Deployment</code>,点击右边的<code>“+”</code>号 ,选择<code>Artifact</code>,选择<code>web</code>项目,<code>Application contex</code>填一个名字。注意，tomcat的路径需要手动在<code>startup/Connection</code>中配置好。</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/6.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/6.gif" class="lazyload"></a></p><h1 id="运行"><a class="markdownIt-Anchor" href="#运行"></a> 运行</h1><ol start="7"><li>好啦！来运行项目看看！选择<code>index.jsp</code>，修改里面的代码内容，嘻嘻！成功运行！</li></ol><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/7.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/7.gif" class="lazyload"></a></p><h1 id="问题可能出现"><a class="markdownIt-Anchor" href="#问题可能出现"></a> 问题（可能出现）</h1><div class="note danger">            <p>注意，若出现：<code>Error running 'Tomcat 8.5.45': port out of range:-1 &amp;&amp; 淇℃伅 [main] org.apache.catalina</code>。</p><ul><li><p>请在<code>tomcat</code>安装目录下进入<code>conf/server.xml</code> ，把里面的<code>sever port = &quot;-1&quot;</code>改成1028（大于1024不等于8080即可）。</p></li><li><p>修改logging.properties 文件里面的<code>java.util.logging.ConsoleHandler.encoding = UTF-8</code>为<code>java.util.logging.ConsoleHandler.encoding = GBK</code></p></li></ul>          </div>]]></content>
     
     <summary type="html">
     
@@ -35,21 +35,21 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tomcat" scheme="https://chuyuxuan.icu/tags/tomcat/"/>
+      <category term="tomcat" scheme="https://chuyuxuan.xyz/tags/tomcat/"/>
     
-      <category term="IDEA" scheme="https://chuyuxuan.icu/tags/IDEA/"/>
+      <category term="IDEA" scheme="https://chuyuxuan.xyz/tags/IDEA/"/>
     
-      <category term="Java Web" scheme="https://chuyuxuan.icu/tags/Java-Web/"/>
+      <category term="Java Web" scheme="https://chuyuxuan.xyz/tags/Java-Web/"/>
     
   </entry>
   
   <entry>
     <title>友链下的评论加载</title>
-    <link href="https://chuyuxuan.icu/2020/04/13/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/hexo%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3/%E8%AF%84%E8%AE%BA%E5%8A%A0%E8%BD%BD/"/>
-    <id>https://chuyuxuan.icu/2020/04/13/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/hexo%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3/%E8%AF%84%E8%AE%BA%E5%8A%A0%E8%BD%BD/</id>
+    <link href="https://chuyuxuan.xyz/2020/04/13/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/hexo%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3/%E8%AF%84%E8%AE%BA%E5%8A%A0%E8%BD%BD/"/>
+    <id>https://chuyuxuan.xyz/2020/04/13/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/hexo%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3/%E8%AF%84%E8%AE%BA%E5%8A%A0%E8%BD%BD/</id>
     <published>2020-04-13T13:00:00.000Z</published>
     <updated>2020-04-13T14:55:18.927Z</updated>
     
@@ -65,17 +65,17 @@
     </summary>
     
     
-      <category term="▶小技能" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/"/>
+      <category term="▶小技能" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="友链相关" scheme="https://chuyuxuan.icu/tags/%E5%8F%8B%E9%93%BE%E7%9B%B8%E5%85%B3/"/>
+      <category term="友链相关" scheme="https://chuyuxuan.xyz/tags/%E5%8F%8B%E9%93%BE%E7%9B%B8%E5%85%B3/"/>
     
   </entry>
   
   <entry>
     <title>全屏预览插件及其属性</title>
-    <link href="https://chuyuxuan.icu/2020/04/12/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A8%E5%B1%8F%E9%A2%84%E8%A7%88/"/>
-    <id>https://chuyuxuan.icu/2020/04/12/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A8%E5%B1%8F%E9%A2%84%E8%A7%88/</id>
+    <link href="https://chuyuxuan.xyz/2020/04/12/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A8%E5%B1%8F%E9%A2%84%E8%A7%88/"/>
+    <id>https://chuyuxuan.xyz/2020/04/12/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A8%E5%B1%8F%E9%A2%84%E8%A7%88/</id>
     <published>2020-04-12T13:00:00.000Z</published>
     <updated>2020-04-13T13:05:03.009Z</updated>
     
@@ -91,19 +91,19 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="jQuery" scheme="https://chuyuxuan.icu/tags/jQuery/"/>
+      <category term="jQuery" scheme="https://chuyuxuan.xyz/tags/jQuery/"/>
     
-      <category term="fullpage" scheme="https://chuyuxuan.icu/tags/fullpage/"/>
+      <category term="fullpage" scheme="https://chuyuxuan.xyz/tags/fullpage/"/>
     
   </entry>
   
   <entry>
     <title>关于的jQuery小知识以及碎碎念</title>
-    <link href="https://chuyuxuan.icu/2020/04/06/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A5%E9%97%A8/"/>
-    <id>https://chuyuxuan.icu/2020/04/06/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A5%E9%97%A8/</id>
+    <link href="https://chuyuxuan.xyz/2020/04/06/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A5%E9%97%A8/"/>
+    <id>https://chuyuxuan.xyz/2020/04/06/%E2%96%B6%E5%89%8D%E7%AB%AF/jQuery/jQuery%E5%85%A5%E9%97%A8/</id>
     <published>2020-04-06T13:00:00.000Z</published>
     <updated>2020-04-13T13:05:03.010Z</updated>
     
@@ -119,17 +119,17 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="jQuery" scheme="https://chuyuxuan.icu/tags/jQuery/"/>
+      <category term="jQuery" scheme="https://chuyuxuan.xyz/tags/jQuery/"/>
     
   </entry>
   
   <entry>
     <title>CSS框架思维导图</title>
-    <link href="https://chuyuxuan.icu/2020/03/30/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CSS%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6/"/>
-    <id>https://chuyuxuan.icu/2020/03/30/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CSS%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/30/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CSS%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6/"/>
+    <id>https://chuyuxuan.xyz/2020/03/30/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CSS%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6/</id>
     <published>2020-03-30T02:00:35.000Z</published>
     <updated>2020-04-13T13:05:03.011Z</updated>
     
@@ -145,21 +145,21 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="https://chuyuxuan.icu/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://chuyuxuan.xyz/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="CSS" scheme="https://chuyuxuan.icu/tags/CSS/"/>
+      <category term="CSS" scheme="https://chuyuxuan.xyz/tags/CSS/"/>
     
-      <category term="框架" scheme="https://chuyuxuan.icu/tags/%E6%A1%86%E6%9E%B6/"/>
+      <category term="框架" scheme="https://chuyuxuan.xyz/tags/%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
   <entry>
     <title>html框架思维导图</title>
-    <link href="https://chuyuxuan.icu/2020/03/26/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/html/"/>
-    <id>https://chuyuxuan.icu/2020/03/26/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/html/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/26/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/html/"/>
+    <id>https://chuyuxuan.xyz/2020/03/26/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/html/</id>
     <published>2020-03-26T09:49:35.000Z</published>
     <updated>2020-04-13T13:05:03.011Z</updated>
     
@@ -175,21 +175,21 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="https://chuyuxuan.icu/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://chuyuxuan.xyz/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="html" scheme="https://chuyuxuan.icu/tags/html/"/>
+      <category term="html" scheme="https://chuyuxuan.xyz/tags/html/"/>
     
-      <category term="思维导图" scheme="https://chuyuxuan.icu/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
+      <category term="思维导图" scheme="https://chuyuxuan.xyz/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/"/>
     
   </entry>
   
   <entry>
     <title>爬虫链接地址</title>
-    <link href="https://chuyuxuan.icu/2020/03/21/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/GitHub%E7%9B%B8%E5%85%B3/%E7%88%AC%E8%99%AB%E9%93%BE%E6%8E%A5/"/>
-    <id>https://chuyuxuan.icu/2020/03/21/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/GitHub%E7%9B%B8%E5%85%B3/%E7%88%AC%E8%99%AB%E9%93%BE%E6%8E%A5/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/21/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/GitHub%E7%9B%B8%E5%85%B3/%E7%88%AC%E8%99%AB%E9%93%BE%E6%8E%A5/"/>
+    <id>https://chuyuxuan.xyz/2020/03/21/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/GitHub%E7%9B%B8%E5%85%B3/%E7%88%AC%E8%99%AB%E9%93%BE%E6%8E%A5/</id>
     <published>2020-03-21T01:32:00.000Z</published>
     <updated>2020-04-13T14:55:18.927Z</updated>
     
@@ -205,19 +205,19 @@
     </summary>
     
     
-      <category term="▶小技能" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/"/>
+      <category term="▶小技能" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="爬虫API" scheme="https://chuyuxuan.icu/tags/%E7%88%AC%E8%99%ABAPI/"/>
+      <category term="爬虫API" scheme="https://chuyuxuan.xyz/tags/%E7%88%AC%E8%99%ABAPI/"/>
     
-      <category term="python" scheme="https://chuyuxuan.icu/tags/python/"/>
+      <category term="python" scheme="https://chuyuxuan.xyz/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>Javascript对象相关</title>
-    <link href="https://chuyuxuan.icu/2020/03/21/%E2%96%B6%E5%89%8D%E7%AB%AF/JavaScript/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E7%9A%84%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3/"/>
-    <id>https://chuyuxuan.icu/2020/03/21/%E2%96%B6%E5%89%8D%E7%AB%AF/JavaScript/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E7%9A%84%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/21/%E2%96%B6%E5%89%8D%E7%AB%AF/JavaScript/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E7%9A%84%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3/"/>
+    <id>https://chuyuxuan.xyz/2020/03/21/%E2%96%B6%E5%89%8D%E7%AB%AF/JavaScript/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/js%E7%9A%84%E5%AF%B9%E8%B1%A1%E7%9B%B8%E5%85%B3/</id>
     <published>2020-03-21T01:30:00.000Z</published>
     <updated>2020-04-15T08:33:41.437Z</updated>
     
@@ -233,23 +233,23 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Javascript" scheme="https://chuyuxuan.icu/tags/Javascript/"/>
+      <category term="Javascript" scheme="https://chuyuxuan.xyz/tags/Javascript/"/>
     
-      <category term="JS对象" scheme="https://chuyuxuan.icu/tags/JS%E5%AF%B9%E8%B1%A1/"/>
+      <category term="JS对象" scheme="https://chuyuxuan.xyz/tags/JS%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
   <entry>
     <title>天外有飞仙</title>
-    <link href="https://chuyuxuan.icu/2020/03/14/%E2%96%B6%E7%94%9F%E6%B4%BB/%E5%A4%A9%E5%A4%96%E9%A3%9E/"/>
-    <id>https://chuyuxuan.icu/2020/03/14/%E2%96%B6%E7%94%9F%E6%B4%BB/%E5%A4%A9%E5%A4%96%E9%A3%9E/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/14/%E2%96%B6%E7%94%9F%E6%B4%BB/%E5%A4%A9%E5%A4%96%E9%A3%9E/"/>
+    <id>https://chuyuxuan.xyz/2020/03/14/%E2%96%B6%E7%94%9F%E6%B4%BB/%E5%A4%A9%E5%A4%96%E9%A3%9E/</id>
     <published>2020-03-14T11:59:22.000Z</published>
     <updated>2020-04-13T14:38:44.954Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-uXvwftid" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="108254" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="300px" data-preload="auto" data-theme="#0000"></div><!-- 选项默认值描述id必须值歌曲 id / 播放列表 id / 相册 id / 搜索关键字server必须值音乐平台: netease, tencent, kugou, xiami, baidutype必须值song, playlist, album, search, artistfixedfalse开启固定模式minifalse开启迷你模式loopall列表循环模式：all, one,noneorderlist列表播放模式： list, randomvolume0.7播放器音量lrctype0歌词格式类型listfoldedfalse指定音乐播放列表是否折叠storagenamemetingjsLocalStorage 中存储播放器设定的键名autoplaytrue自动播放，移动端浏览器暂时不支持此功能mutextrue该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停listmaxheight340px播放列表的最大长度preloadauto音乐文件预载入模式，可选项： none, metadata, autotheme#ad7a86播放器风格色彩设置 --><h1 id="天外有飞仙"><a class="markdownIt-Anchor" href="#天外有飞仙"></a> 天外有飞仙</h1><p>夜来，习惯性的打开了网易云音乐，熟练的点开了今日推荐的歌单。默默地掏出耳机，小心翼翼的将耳塞塞在耳朵里，生怕带来不和谐的杂音让耳朵感觉到这个世界的&quot;嘈杂&quot;。</p><p>双手飞舞着敲打着作业代码，没错，音乐配代码，电脑旁边放着水杯，一切都是这么静逸，一切就像往常一样。</p><p>突然间耳朵里一首前奏，猛的唤起了我脑海里深处的记忆。这熟悉又陌生的感觉，是老林的<a href="https://music.163.com/#/song?id=108254" target="_blank" rel="noopener">一眼万年</a>。</p><p>思绪飘到了小时候。放学回家，写完作业，屁颠屁颠的找着老妈给遥控器，然后坐在电视机前，守着电视里放的天外飞仙。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" class="lazyload"></a></p><p>即使我那个时候看不懂。</p><p>小学生的我为董永不能和小七在一起而骂玉皇大帝是坏人，同时也迁怒二郎神这个小跟班，枉我还学他在额头上画一只眼睛。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" class="lazyload"></a></p><p>果然，小孩子眼里只有错与对，好与坏，单纯无邪。</p><p>有时候，看似那完美无缺的爱情，不得不败在这骨感的现实面前。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" class="lazyload"></a></p><p>你是仙人，而我只是一个凡人。仙人终究不能和凡人在一起的，仙人长生不老，而凡人，终究抵不过岁月消磨而老去。或许，老去的凡人是幸福的，因为它的爱人陪伴了它终生，亦或是痛苦的，因为在心爱之人前离去，剩下的，只有心爱之人的回忆。</p><p>古人终究是美好的，借用“转世”一说，续写了这凄美的爱情，歌颂着爱情。《狐妖小红娘》里的相思树，故若此吧。<br><a href="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" class="lazyload"></a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-sYVLpLES" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="108254" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="300px" data-preload="auto" data-theme="#0000"></div><!-- 选项默认值描述id必须值歌曲 id / 播放列表 id / 相册 id / 搜索关键字server必须值音乐平台: netease, tencent, kugou, xiami, baidutype必须值song, playlist, album, search, artistfixedfalse开启固定模式minifalse开启迷你模式loopall列表循环模式：all, one,noneorderlist列表播放模式： list, randomvolume0.7播放器音量lrctype0歌词格式类型listfoldedfalse指定音乐播放列表是否折叠storagenamemetingjsLocalStorage 中存储播放器设定的键名autoplaytrue自动播放，移动端浏览器暂时不支持此功能mutextrue该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停listmaxheight340px播放列表的最大长度preloadauto音乐文件预载入模式，可选项： none, metadata, autotheme#ad7a86播放器风格色彩设置 --><h1 id="天外有飞仙"><a class="markdownIt-Anchor" href="#天外有飞仙"></a> 天外有飞仙</h1><p>夜来，习惯性的打开了网易云音乐，熟练的点开了今日推荐的歌单。默默地掏出耳机，小心翼翼的将耳塞塞在耳朵里，生怕带来不和谐的杂音让耳朵感觉到这个世界的&quot;嘈杂&quot;。</p><p>双手飞舞着敲打着作业代码，没错，音乐配代码，电脑旁边放着水杯，一切都是这么静逸，一切就像往常一样。</p><p>突然间耳朵里一首前奏，猛的唤起了我脑海里深处的记忆。这熟悉又陌生的感觉，是老林的<a href="https://music.163.com/#/song?id=108254" target="_blank" rel="noopener">一眼万年</a>。</p><p>思绪飘到了小时候。放学回家，写完作业，屁颠屁颠的找着老妈给遥控器，然后坐在电视机前，守着电视里放的天外飞仙。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" class="lazyload"></a></p><p>即使我那个时候看不懂。</p><p>小学生的我为董永不能和小七在一起而骂玉皇大帝是坏人，同时也迁怒二郎神这个小跟班，枉我还学他在额头上画一只眼睛。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" class="lazyload"></a></p><p>果然，小孩子眼里只有错与对，好与坏，单纯无邪。</p><p>有时候，看似那完美无缺的爱情，不得不败在这骨感的现实面前。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" class="lazyload"></a></p><p>你是仙人，而我只是一个凡人。仙人终究不能和凡人在一起的，仙人长生不老，而凡人，终究抵不过岁月消磨而老去。或许，老去的凡人是幸福的，因为它的爱人陪伴了它终生，亦或是痛苦的，因为在心爱之人前离去，剩下的，只有心爱之人的回忆。</p><p>古人终究是美好的，借用“转世”一说，续写了这凄美的爱情，歌颂着爱情。《狐妖小红娘》里的相思树，故若此吧。<br><a href="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" class="lazyload"></a></p>]]></content>
     
     <summary type="html">
     
@@ -261,17 +261,17 @@
     </summary>
     
     
-      <category term="▶生活" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E7%94%9F%E6%B4%BB/"/>
+      <category term="▶生活" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="日常" scheme="https://chuyuxuan.icu/tags/%E6%97%A5%E5%B8%B8/"/>
+      <category term="日常" scheme="https://chuyuxuan.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
   <entry>
     <title>CSS背景定位与背景关联</title>
-    <link href="https://chuyuxuan.icu/2020/03/11/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CCS%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%85%B3%E8%81%94/"/>
-    <id>https://chuyuxuan.icu/2020/03/11/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CCS%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%85%B3%E8%81%94/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/11/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CCS%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%85%B3%E8%81%94/"/>
+    <id>https://chuyuxuan.xyz/2020/03/11/%E2%96%B6%E5%89%8D%E7%AB%AF/CSS/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CCS%E8%83%8C%E6%99%AF%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%85%B3%E8%81%94/</id>
     <published>2020-03-11T04:49:35.000Z</published>
     <updated>2020-04-13T13:05:03.010Z</updated>
     
@@ -287,21 +287,21 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="https://chuyuxuan.icu/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://chuyuxuan.xyz/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="CSS" scheme="https://chuyuxuan.icu/tags/CSS/"/>
+      <category term="CSS" scheme="https://chuyuxuan.xyz/tags/CSS/"/>
     
-      <category term="background" scheme="https://chuyuxuan.icu/tags/background/"/>
+      <category term="background" scheme="https://chuyuxuan.xyz/tags/background/"/>
     
   </entry>
   
   <entry>
     <title>Http协议那些事儿</title>
-    <link href="https://chuyuxuan.icu/2020/03/09/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%BA%94%E7%94%A8%E5%B1%82/http%E5%8D%8F%E8%AE%AE%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
-    <id>https://chuyuxuan.icu/2020/03/09/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%BA%94%E7%94%A8%E5%B1%82/http%E5%8D%8F%E8%AE%AE%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/09/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%BA%94%E7%94%A8%E5%B1%82/http%E5%8D%8F%E8%AE%AE%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
+    <id>https://chuyuxuan.xyz/2020/03/09/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E5%BA%94%E7%94%A8%E5%B1%82/http%E5%8D%8F%E8%AE%AE%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</id>
     <published>2020-03-09T11:42:53.000Z</published>
     <updated>2020-04-13T13:05:03.011Z</updated>
     
@@ -317,19 +317,19 @@
     </summary>
     
     
-      <category term="▶计算机网络" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="▶计算机网络" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="计算机网络" scheme="https://chuyuxuan.icu/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
-      <category term="Http" scheme="https://chuyuxuan.icu/tags/Http/"/>
+      <category term="Http" scheme="https://chuyuxuan.xyz/tags/Http/"/>
     
   </entry>
   
   <entry>
     <title>Window下照片快速批量命名</title>
-    <link href="https://chuyuxuan.icu/2020/03/05/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/%E7%94%B5%E8%84%91%E5%B0%8F%E6%8A%80%E5%B7%A7/window%E4%B8%8B%E5%BF%AB%E9%80%9F%E5%91%BD%E5%90%8D/"/>
-    <id>https://chuyuxuan.icu/2020/03/05/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/%E7%94%B5%E8%84%91%E5%B0%8F%E6%8A%80%E5%B7%A7/window%E4%B8%8B%E5%BF%AB%E9%80%9F%E5%91%BD%E5%90%8D/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/05/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/%E7%94%B5%E8%84%91%E5%B0%8F%E6%8A%80%E5%B7%A7/window%E4%B8%8B%E5%BF%AB%E9%80%9F%E5%91%BD%E5%90%8D/"/>
+    <id>https://chuyuxuan.xyz/2020/03/05/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/%E7%94%B5%E8%84%91%E5%B0%8F%E6%8A%80%E5%B7%A7/window%E4%B8%8B%E5%BF%AB%E9%80%9F%E5%91%BD%E5%90%8D/</id>
     <published>2020-03-05T05:16:38.000Z</published>
     <updated>2020-04-13T14:55:18.927Z</updated>
     
@@ -345,21 +345,21 @@
     </summary>
     
     
-      <category term="▶小技能" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/"/>
+      <category term="▶小技能" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%B0%8F%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="windows" scheme="https://chuyuxuan.icu/tags/windows/"/>
+      <category term="windows" scheme="https://chuyuxuan.xyz/tags/windows/"/>
     
-      <category term="cmd" scheme="https://chuyuxuan.icu/tags/cmd/"/>
+      <category term="cmd" scheme="https://chuyuxuan.xyz/tags/cmd/"/>
     
-      <category term="bat" scheme="https://chuyuxuan.icu/tags/bat/"/>
+      <category term="bat" scheme="https://chuyuxuan.xyz/tags/bat/"/>
     
   </entry>
   
   <entry>
     <title>作业4</title>
-    <link href="https://chuyuxuan.icu/2020/03/05/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A4/"/>
-    <id>https://chuyuxuan.icu/2020/03/05/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A4/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/05/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A4/"/>
+    <id>https://chuyuxuan.xyz/2020/03/05/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A4/</id>
     <published>2020-03-05T04:16:38.000Z</published>
     <updated>2020-04-13T13:05:03.010Z</updated>
     
@@ -375,19 +375,19 @@
     </summary>
     
     
-      <category term="▶计算机图形学" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+      <category term="▶计算机图形学" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
     
-      <category term="openGL" scheme="https://chuyuxuan.icu/tags/openGL/"/>
+      <category term="openGL" scheme="https://chuyuxuan.xyz/tags/openGL/"/>
     
-      <category term="计算机图形学" scheme="https://chuyuxuan.icu/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+      <category term="计算机图形学" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>OpenGL 在Win下开发环境配置</title>
-    <link href="https://chuyuxuan.icu/2020/03/03/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/openGL_bulid/"/>
-    <id>https://chuyuxuan.icu/2020/03/03/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/openGL_bulid/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/03/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/openGL_bulid/"/>
+    <id>https://chuyuxuan.xyz/2020/03/03/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/openGL_bulid/</id>
     <published>2020-03-03T14:26:54.075Z</published>
     <updated>2020-03-05T07:28:00.228Z</updated>
     
@@ -403,19 +403,19 @@
     </summary>
     
     
-      <category term="▶计算机图形学" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+      <category term="▶计算机图形学" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
     
-      <category term="openGL" scheme="https://chuyuxuan.icu/tags/openGL/"/>
+      <category term="openGL" scheme="https://chuyuxuan.xyz/tags/openGL/"/>
     
-      <category term="Visual studio 2019" scheme="https://chuyuxuan.icu/tags/Visual-studio-2019/"/>
+      <category term="Visual studio 2019" scheme="https://chuyuxuan.xyz/tags/Visual-studio-2019/"/>
     
   </entry>
   
   <entry>
     <title>Vue小基础大集合</title>
-    <link href="https://chuyuxuan.icu/2020/03/02/%E2%96%B6%E5%89%8D%E7%AB%AF/Vue/Vue%E5%9F%BA%E7%A1%80/vue%E5%A4%A7%E8%87%B4%E9%A1%B9%E7%9B%AE/"/>
-    <id>https://chuyuxuan.icu/2020/03/02/%E2%96%B6%E5%89%8D%E7%AB%AF/Vue/Vue%E5%9F%BA%E7%A1%80/vue%E5%A4%A7%E8%87%B4%E9%A1%B9%E7%9B%AE/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/02/%E2%96%B6%E5%89%8D%E7%AB%AF/Vue/Vue%E5%9F%BA%E7%A1%80/vue%E5%A4%A7%E8%87%B4%E9%A1%B9%E7%9B%AE/"/>
+    <id>https://chuyuxuan.xyz/2020/03/02/%E2%96%B6%E5%89%8D%E7%AB%AF/Vue/Vue%E5%9F%BA%E7%A1%80/vue%E5%A4%A7%E8%87%B4%E9%A1%B9%E7%9B%AE/</id>
     <published>2020-03-02T14:17:33.068Z</published>
     <updated>2020-04-13T13:05:03.011Z</updated>
     
@@ -431,17 +431,17 @@
     </summary>
     
     
-      <category term="▶前端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
+      <category term="▶前端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="Vue" scheme="https://chuyuxuan.icu/tags/Vue/"/>
+      <category term="Vue" scheme="https://chuyuxuan.xyz/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>概率论知识点总结</title>
-    <link href="https://chuyuxuan.icu/2020/03/01/%E2%96%B6%E6%A6%82%E7%8E%87%E8%AE%BA/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/"/>
-    <id>https://chuyuxuan.icu/2020/03/01/%E2%96%B6%E6%A6%82%E7%8E%87%E8%AE%BA/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/</id>
+    <link href="https://chuyuxuan.xyz/2020/03/01/%E2%96%B6%E6%A6%82%E7%8E%87%E8%AE%BA/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/"/>
+    <id>https://chuyuxuan.xyz/2020/03/01/%E2%96%B6%E6%A6%82%E7%8E%87%E8%AE%BA/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/</id>
     <published>2020-03-01T14:00:52.000Z</published>
     <updated>2020-04-13T14:38:18.462Z</updated>
     
@@ -457,49 +457,21 @@
     </summary>
     
     
-      <category term="▶概率论" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+      <category term="▶概率论" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
     
-      <category term="概率论" scheme="https://chuyuxuan.icu/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chrome for edge 上手体验</title>
-    <link href="https://chuyuxuan.icu/2020/03/01/%E2%96%B6%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/chrome-edge/"/>
-    <id>https://chuyuxuan.icu/2020/03/01/%E2%96%B6%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/chrome-edge/</id>
-    <published>2020-03-01T14:00:00.000Z</published>
-    <updated>2020-04-13T14:55:18.927Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p><font color="#840005" size="4">最近微软官方为Edge更新了，根据官方说明，是加入了chrome内核 ，所以今天闲着么事 ，就下载体验了一番。 </font></p><h2 id="打开我的破谷歌输入官网进入了下载界面-注意这里是英文版本的"><a class="markdownIt-Anchor" href="#打开我的破谷歌输入官网进入了下载界面-注意这里是英文版本的"></a> 打开我的破谷歌，输入<a href="https://www.microsoft.com/en-us/edge" target="_blank" rel="noopener">官网</a>，进入了下载界面。注意，这里是英文版本的。</h2><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/share/1.png" data-fancybox="group" data-caption="下载界面" class="fancybox"><img alt="下载界面" title="下载界面" data-src="https://gitee.com/chuyuxuan/tuc/raw/master/share/1.png" class="lazyload"></a></p><h2 id="有点东西我下载下来安装只是这感人的网速有点迷"><a class="markdownIt-Anchor" href="#有点东西我下载下来安装只是这感人的网速有点迷"></a> 有点东西，我下载下来安装，只是这感人的网速有点迷。</h2><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/share/2.png" data-fancybox="group" data-caption="下载界面" class="fancybox"><img alt="下载界面" title="下载界面" data-src="https://gitee.com/chuyuxuan/tuc/raw/master/share/2.png" class="lazyload"></a></p><h2 id="安装下载捣鼓一阵子欸蛮好看的"><a class="markdownIt-Anchor" href="#安装下载捣鼓一阵子欸蛮好看的"></a> 安装下载捣鼓一阵子，欸，蛮好看的。</h2><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/share/3.png" data-fancybox="group" data-caption="下载界面" class="fancybox"><img alt="下载界面" title="下载界面" data-src="https://gitee.com/chuyuxuan/tuc/raw/master/share/3.png" class="lazyload"></a></p><h2 id="后面就开始慢慢的与它磨合磨合-讲真整体ui配合-win-的扁平设计元素是微软没错了-爱了爱了"><a class="markdownIt-Anchor" href="#后面就开始慢慢的与它磨合磨合-讲真整体ui配合-win-的扁平设计元素是微软没错了-爱了爱了"></a> 后面就开始慢慢的与它磨合磨合。讲真，整体UI配合 WIN 的扁平设计元素，是微软没错了。爱了爱了。</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="▶资源推荐" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90/"/>
-    
-    
-      <category term="Chrome" scheme="https://chuyuxuan.icu/tags/Chrome/"/>
-    
-      <category term="edge" scheme="https://chuyuxuan.icu/tags/edge/"/>
+      <category term="概率论" scheme="https://chuyuxuan.xyz/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>为了博客也是操碎了心（Linux 下 配置 git ）</title>
-    <link href="https://chuyuxuan.icu/2020/02/28/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/Linux%E5%AE%89%E8%A3%85git/"/>
-    <id>https://chuyuxuan.icu/2020/02/28/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/Linux%E5%AE%89%E8%A3%85git/</id>
+    <link href="https://chuyuxuan.xyz/2020/02/28/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/Linux%E5%AE%89%E8%A3%85git/"/>
+    <id>https://chuyuxuan.xyz/2020/02/28/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/Linux%E5%AE%89%E8%A3%85git/</id>
     <published>2020-02-28T10:49:35.000Z</published>
     <updated>2020-04-13T13:05:03.009Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="起因"><a class="markdownIt-Anchor" href="#起因"></a> 起因</h1><p>诚然,我的博客采用的是<code>hexo farmework</code>，依托于<code>gitpage</code>而搭建的，对于国内的我来说很不友好。😖于是我在想啊，要不用CND加速？<strong>哈哈哈，蛮不错的</strong>。结果一查相关资料，顿时有点懵。</p><ul><li><p>我买了域名，但是<code>gitpage</code>依赖于GitHub，是属于国外的服务器的，所以我并不需要备案就可以用<a href="https://chuyuxuan.xyz" target="_blank" rel="noopener">chuyuxuan.xyz</a>来访问我的博客。</p></li><li><p>而假如我想用国内的CDN加速我的资源，我的域名就必须要备案。备案你就得必须要有服务器。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" class="lazyload"></a></p></li></ul><p>好了，扯的有点远了，总之，能用技术解决的事情尽量用技术去解决。所以了了适应云主机，这里便采用虚拟机模拟了一个本地的服务器，为自己把博客部署到云端做准备。</p><h1 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h1><div class="note success">            <ol><li>VMware Workstation <a href="https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0?wd=&amp;eqid=9718f2bc000e9110000000065e58f46d" target="_blank" rel="noopener">点击下载</a></li><li>CentOS ISO <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1908.iso" target="_blank" rel="noopener">点击下载</a></li></ol><p><em>当然，可以自己百度搜索相关资源</em></p>          </div><h1 id="安装-vmware-和-建立centos虚拟机"><a class="markdownIt-Anchor" href="#安装-vmware-和-建立centos虚拟机"></a> 安装 <code>VMware</code> 和 建立<code>centOS</code>虚拟机</h1><p>这里我就不再演示了，是个人就会安装，实在不会百度。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/097.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/097.gif" class="lazyload"></a></p><h1 id="git服务端安装"><a class="markdownIt-Anchor" href="#git服务端安装"></a> git服务端安装</h1><h2 id="从yum安装git"><a class="markdownIt-Anchor" href="#从yum安装git"></a> 从<code>yum</code>安装git</h2><pre><code>yum install git-core</code></pre><h2 id="在需要的位置创建一个裸仓库"><a class="markdownIt-Anchor" href="#在需要的位置创建一个裸仓库"></a> 在需要的位置创建一个裸仓库</h2><pre><code>cd /usr/local mkdir gitcd gitgit init --bare demo.git</code></pre><h2 id="创建一个git用户并赋予密码"><a class="markdownIt-Anchor" href="#创建一个git用户并赋予密码"></a> 创建一个git用户并赋予密码</h2><pre><code>useradd gitpasswd git//输入密码大于8位，用于push和clone</code></pre><h2 id="赋予git用户权限"><a class="markdownIt-Anchor" href="#赋予git用户权限"></a> 赋予git用户权限</h2><p><code>chown</code>将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户ID；组可以是组名或者组ID；文件是以空格分开的要改变权限的文件列表，支持通配符。系统管理员经常使用chown命令，在将文件拷贝到另一个用户的名录下之后，让用户拥有使用该文件的权限。</p><pre><code>chown -R git:git demo.git //把权限赋给名字为git的用户</code></pre><h2 id="禁用git用户shell登录为了安全虽然我是在本地虚拟机上跑"><a class="markdownIt-Anchor" href="#禁用git用户shell登录为了安全虽然我是在本地虚拟机上跑"></a> 禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）</h2><pre><code>vim /etc/passwd//找到最后一行（一般都是的）// 敲 “i” 进行编辑git:x:1000:1000::/home/git:/usr/bin/git-shell//改成上面格式之后esc然后敲“：wq!”保存并退出</code></pre><p><strong>恭喜!服务端配置基本完成，接下来是客户端了。</strong></p><h1 id="git客户端安装"><a class="markdownIt-Anchor" href="#git客户端安装"></a> git客户端安装</h1><p><strong>这里百度去吧，很简单的，我采用的是window下的git服务，就直接下一步好了，这里给出下载地址：</strong><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">点击下载</a></p><h2 id="创建客户端用户"><a class="markdownIt-Anchor" href="#创建客户端用户"></a> 创建客户端用户</h2><p>安装好后桌面右键，<code>git Bush here</code>就可以进入shell.</p><pre><code>git config --global user.name &quot;你的名字&quot;git config --global user.email &quot;你的邮箱&quot;</code></pre><h2 id="创建密钥ssh不嫌麻烦的话可以不用配置"><a class="markdownIt-Anchor" href="#创建密钥ssh不嫌麻烦的话可以不用配置"></a> 创建密钥ssh(不嫌麻烦的话可以不用配置)</h2><pre><code>ssh-keygen -t rsa -C &quot;你的邮箱&quot;</code></pre><p>然后<strong>一直回车</strong>，直到完毕。</p><h2 id="将公钥加入服务器列表"><a class="markdownIt-Anchor" href="#将公钥加入服务器列表"></a> 将公钥加入服务器列表</h2><h3 id="取得本地ssh公钥"><a class="markdownIt-Anchor" href="#取得本地ssh公钥"></a> 取得本地ssh公钥</h3><pre><code>cd ~/.sshcat id_rsa.pub </code></pre><p>复制，内容大概如下：</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-rsafdjslafhs;jgjieghegoghskf+fdhsjaklghj</span><br><span class="line">fsahjgjrl;agjkfl;dafjsighiroghuerhgkfdvrreui</span><br><span class="line">fhgrjegreoughuighuitglsghruighirhgbibvifrggg</span><br><span class="line">grhuipaghuireghergerpreofjeiwfhfuhbjzb+0frhf</span><br><span class="line">fshgheagwgegw&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;你的邮箱</span><br></pre></td></tr></table></figure></div><h3 id="添加到服务端"><a class="markdownIt-Anchor" href="#添加到服务端"></a> 添加到服务端</h3><p>默认列表在/root/.ssh/authorized_keys，使用vim 编辑此文件输入刚才复制的内容，保存退出。</p><pre><code>vi /root/.ssh/authorized_keys//i修改//esc后输入:wq保存退出</code></pre><h1 id="克隆远程项目到本地"><a class="markdownIt-Anchor" href="#克隆远程项目到本地"></a> 克隆远程项目到本地</h1><p>在自己的电脑上随便找个位置，<code>git Bush here</code>，</p><pre><code>git clone git@‘你服务器的IP地址’:/usr/local/git/demogit.git//例如： git clone git@111.111.111.111:/usr/local/git/demo.git</code></pre><h1 id="至此over"><a class="markdownIt-Anchor" href="#至此over"></a> 至此，over。</h1><p>当然，你可以push你自己的代码到服务器上，比方说把<code>hexo</code>静态博客push上去，实现本地访问。</p><h1 id="感慨"><a class="markdownIt-Anchor" href="#感慨"></a> 感慨</h1><p>花了我很久时间，大部分时间我在做无用功。。怪自己自学太慢了。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/087.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/087.gif" class="lazyload"></a></p><p>我在想自己还到底要不要用CDN加速哦。。。难搞难搞。。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="起因"><a class="markdownIt-Anchor" href="#起因"></a> 起因</h1><p>诚然,我的博客采用的是<code>hexo farmework</code>，依托于<code>gitpage</code>而搭建的，对于国内的我来说很不友好。😖于是我在想啊，要不用CND加速？<strong>哈哈哈，蛮不错的</strong>。结果一查相关资料，顿时有点懵。</p><ul><li><p>我买了域名，但是<code>gitpage</code>依赖于GitHub，是属于国外的服务器的，所以我并不需要备案就可以用<a href="https://chuyuxuan.xyz">chuyuxuan.xyz</a>来访问我的博客。</p></li><li><p>而假如我想用国内的CDN加速我的资源，我的域名就必须要备案。备案你就得必须要有服务器。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif" class="lazyload"></a></p></li></ul><p>好了，扯的有点远了，总之，能用技术解决的事情尽量用技术去解决。所以了了适应云主机，这里便采用虚拟机模拟了一个本地的服务器，为自己把博客部署到云端做准备。</p><h1 id="准备"><a class="markdownIt-Anchor" href="#准备"></a> 准备</h1><div class="note success">            <ol><li>VMware Workstation <a href="https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0?wd=&amp;eqid=9718f2bc000e9110000000065e58f46d" target="_blank" rel="noopener">点击下载</a></li><li>CentOS ISO <a href="https://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1908.iso" target="_blank" rel="noopener">点击下载</a></li></ol><p><em>当然，可以自己百度搜索相关资源</em></p>          </div><h1 id="安装-vmware-和-建立centos虚拟机"><a class="markdownIt-Anchor" href="#安装-vmware-和-建立centos虚拟机"></a> 安装 <code>VMware</code> 和 建立<code>centOS</code>虚拟机</h1><p>这里我就不再演示了，是个人就会安装，实在不会百度。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/097.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/097.gif" class="lazyload"></a></p><h1 id="git服务端安装"><a class="markdownIt-Anchor" href="#git服务端安装"></a> git服务端安装</h1><h2 id="从yum安装git"><a class="markdownIt-Anchor" href="#从yum安装git"></a> 从<code>yum</code>安装git</h2><pre><code>yum install git-core</code></pre><h2 id="在需要的位置创建一个裸仓库"><a class="markdownIt-Anchor" href="#在需要的位置创建一个裸仓库"></a> 在需要的位置创建一个裸仓库</h2><pre><code>cd /usr/local mkdir gitcd gitgit init --bare demo.git</code></pre><h2 id="创建一个git用户并赋予密码"><a class="markdownIt-Anchor" href="#创建一个git用户并赋予密码"></a> 创建一个git用户并赋予密码</h2><pre><code>useradd gitpasswd git//输入密码大于8位，用于push和clone</code></pre><h2 id="赋予git用户权限"><a class="markdownIt-Anchor" href="#赋予git用户权限"></a> 赋予git用户权限</h2><p><code>chown</code>将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户ID；组可以是组名或者组ID；文件是以空格分开的要改变权限的文件列表，支持通配符。系统管理员经常使用chown命令，在将文件拷贝到另一个用户的名录下之后，让用户拥有使用该文件的权限。</p><pre><code>chown -R git:git demo.git //把权限赋给名字为git的用户</code></pre><h2 id="禁用git用户shell登录为了安全虽然我是在本地虚拟机上跑"><a class="markdownIt-Anchor" href="#禁用git用户shell登录为了安全虽然我是在本地虚拟机上跑"></a> 禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）</h2><pre><code>vim /etc/passwd//找到最后一行（一般都是的）// 敲 “i” 进行编辑git:x:1000:1000::/home/git:/usr/bin/git-shell//改成上面格式之后esc然后敲“：wq!”保存并退出</code></pre><p><strong>恭喜!服务端配置基本完成，接下来是客户端了。</strong></p><h1 id="git客户端安装"><a class="markdownIt-Anchor" href="#git客户端安装"></a> git客户端安装</h1><p><strong>这里百度去吧，很简单的，我采用的是window下的git服务，就直接下一步好了，这里给出下载地址：</strong><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">点击下载</a></p><h2 id="创建客户端用户"><a class="markdownIt-Anchor" href="#创建客户端用户"></a> 创建客户端用户</h2><p>安装好后桌面右键，<code>git Bush here</code>就可以进入shell.</p><pre><code>git config --global user.name &quot;你的名字&quot;git config --global user.email &quot;你的邮箱&quot;</code></pre><h2 id="创建密钥ssh不嫌麻烦的话可以不用配置"><a class="markdownIt-Anchor" href="#创建密钥ssh不嫌麻烦的话可以不用配置"></a> 创建密钥ssh(不嫌麻烦的话可以不用配置)</h2><pre><code>ssh-keygen -t rsa -C &quot;你的邮箱&quot;</code></pre><p>然后<strong>一直回车</strong>，直到完毕。</p><h2 id="将公钥加入服务器列表"><a class="markdownIt-Anchor" href="#将公钥加入服务器列表"></a> 将公钥加入服务器列表</h2><h3 id="取得本地ssh公钥"><a class="markdownIt-Anchor" href="#取得本地ssh公钥"></a> 取得本地ssh公钥</h3><pre><code>cd ~/.sshcat id_rsa.pub </code></pre><p>复制，内容大概如下：</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-rsafdjslafhs;jgjieghegoghskf+fdhsjaklghj</span><br><span class="line">fsahjgjrl;agjkfl;dafjsighiroghuerhgkfdvrreui</span><br><span class="line">fhgrjegreoughuighuitglsghruighirhgbibvifrggg</span><br><span class="line">grhuipaghuireghergerpreofjeiwfhfuhbjzb+0frhf</span><br><span class="line">fshgheagwgegw&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;你的邮箱</span><br></pre></td></tr></table></figure></div><h3 id="添加到服务端"><a class="markdownIt-Anchor" href="#添加到服务端"></a> 添加到服务端</h3><p>默认列表在/root/.ssh/authorized_keys，使用vim 编辑此文件输入刚才复制的内容，保存退出。</p><pre><code>vi /root/.ssh/authorized_keys//i修改//esc后输入:wq保存退出</code></pre><h1 id="克隆远程项目到本地"><a class="markdownIt-Anchor" href="#克隆远程项目到本地"></a> 克隆远程项目到本地</h1><p>在自己的电脑上随便找个位置，<code>git Bush here</code>，</p><pre><code>git clone git@‘你服务器的IP地址’:/usr/local/git/demogit.git//例如： git clone git@111.111.111.111:/usr/local/git/demo.git</code></pre><h1 id="至此over"><a class="markdownIt-Anchor" href="#至此over"></a> 至此，over。</h1><p>当然，你可以push你自己的代码到服务器上，比方说把<code>hexo</code>静态博客push上去，实现本地访问。</p><h1 id="感慨"><a class="markdownIt-Anchor" href="#感慨"></a> 感慨</h1><p>花了我很久时间，大部分时间我在做无用功。。怪自己自学太慢了。<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/087.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/087.gif" class="lazyload"></a></p><p>我在想自己还到底要不要用CDN加速哦。。。难搞难搞。。</p>]]></content>
     
     <summary type="html">
     
@@ -511,19 +483,19 @@
     </summary>
     
     
-      <category term="▶后端" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E5%90%8E%E7%AB%AF/"/>
+      <category term="▶后端" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="Linux" scheme="https://chuyuxuan.icu/tags/Linux/"/>
+      <category term="Linux" scheme="https://chuyuxuan.xyz/tags/Linux/"/>
     
-      <category term="centOS" scheme="https://chuyuxuan.icu/tags/centOS/"/>
+      <category term="centOS" scheme="https://chuyuxuan.xyz/tags/centOS/"/>
     
   </entry>
   
   <entry>
     <title>日常感慨</title>
-    <link href="https://chuyuxuan.icu/2020/02/26/%E2%96%B6%E7%94%9F%E6%B4%BB/%E6%84%9F%E6%85%A8%E4%B8%80%E4%B8%8B/"/>
-    <id>https://chuyuxuan.icu/2020/02/26/%E2%96%B6%E7%94%9F%E6%B4%BB/%E6%84%9F%E6%85%A8%E4%B8%80%E4%B8%8B/</id>
+    <link href="https://chuyuxuan.xyz/2020/02/26/%E2%96%B6%E7%94%9F%E6%B4%BB/%E6%84%9F%E6%85%A8%E4%B8%80%E4%B8%8B/"/>
+    <id>https://chuyuxuan.xyz/2020/02/26/%E2%96%B6%E7%94%9F%E6%B4%BB/%E6%84%9F%E6%85%A8%E4%B8%80%E4%B8%8B/</id>
     <published>2020-02-26T14:02:22.000Z</published>
     <updated>2020-04-13T14:38:44.954Z</updated>
     
@@ -539,17 +511,17 @@
     </summary>
     
     
-      <category term="▶生活" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E7%94%9F%E6%B4%BB/"/>
+      <category term="▶生活" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="日常" scheme="https://chuyuxuan.icu/tags/%E6%97%A5%E5%B8%B8/"/>
+      <category term="日常" scheme="https://chuyuxuan.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
     
   </entry>
   
   <entry>
     <title>作业3</title>
-    <link href="https://chuyuxuan.icu/2020/02/25/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A3/"/>
-    <id>https://chuyuxuan.icu/2020/02/25/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A3/</id>
+    <link href="https://chuyuxuan.xyz/2020/02/25/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A3/"/>
+    <id>https://chuyuxuan.xyz/2020/02/25/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A3/</id>
     <published>2020-02-25T09:16:38.000Z</published>
     <updated>2020-04-13T13:05:03.009Z</updated>
     
@@ -565,14 +537,40 @@
     </summary>
     
     
-      <category term="▶计算机图形学" scheme="https://chuyuxuan.icu/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+      <category term="▶计算机图形学" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
     
-      <category term="计算机图形学" scheme="https://chuyuxuan.icu/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+      <category term="计算机图形学" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-      <category term="线性代数基础" scheme="https://chuyuxuan.icu/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E7%A1%80/"/>
+      <category term="线性代数基础" scheme="https://chuyuxuan.xyz/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E5%9F%BA%E7%A1%80/"/>
     
-      <category term="知识巩固" scheme="https://chuyuxuan.icu/tags/%E7%9F%A5%E8%AF%86%E5%B7%A9%E5%9B%BA/"/>
+      <category term="知识巩固" scheme="https://chuyuxuan.xyz/tags/%E7%9F%A5%E8%AF%86%E5%B7%A9%E5%9B%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>课后作业2</title>
+    <link href="https://chuyuxuan.xyz/2020/02/22/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A2/"/>
+    <id>https://chuyuxuan.xyz/2020/02/22/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A/%E4%BD%9C%E4%B8%9A2/</id>
+    <published>2020-02-22T02:49:35.000Z</published>
+    <updated>2020-04-13T13:05:03.009Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="2-1假设rgb光栅系统的设计采用8x10英寸的屏幕每个方向的分辨率为每英寸100个像素-如果每个像素使用8位存放在帧缓冲器中则帧缓冲器至少需要多大存储容量字节数"><a class="markdownIt-Anchor" href="#2-1假设rgb光栅系统的设计采用8x10英寸的屏幕每个方向的分辨率为每英寸100个像素-如果每个像素使用8位存放在帧缓冲器中则帧缓冲器至少需要多大存储容量字节数"></a> 2-1假设RGB光栅系统的设计采用8x10英寸的屏幕，每个方向的分辨率为每英寸100个像素。如果每个像素使用8位，存放在帧缓冲器中，则帧缓冲器至少需要多大存储容量(字节数) ?</h2><pre><code>   8×100×10×100÷8= 800,000 Byte</code></pre><p>需要<code>800000</code>字节。</p><h2 id="2-2假设计算机字长为32位传输速率为1-mips每秒百万条指令-300-dpi-每英寸点数的激光打印机页面大小为85x11英寸要填满帧缓冲器至少需要多长时间"><a class="markdownIt-Anchor" href="#2-2假设计算机字长为32位传输速率为1-mips每秒百万条指令-300-dpi-每英寸点数的激光打印机页面大小为85x11英寸要填满帧缓冲器至少需要多长时间"></a> 2-2假设计算机字长为32位，传输速率为1 MIPS(每秒百万条指令)。300 DPI。(每英寸点数)的激光打印机，页面大小为8.5x11英寸，要填满帧缓冲器至少需要多长时间？</h2><p>计算机共有DPI为：</p><pre><code>    8.5×300×11×300=8,415,000 DPI</code></pre><p>一共需要存储空间为：</p><pre><code>    8,415,000÷32=262,968.75 Byte</code></pre><p>根据MIPS，可计算t为：</p><pre><code>    t = 262,968.75 Byte ÷1 MIPS ≈0.26 s</code></pre><h2 id="2-3考虑分辨率为1024x768的光栅系统-若刷新速率为每秒60帧则每秒钟应访问多少像素每个像素的访问时间至少是多少"><a class="markdownIt-Anchor" href="#2-3考虑分辨率为1024x768的光栅系统-若刷新速率为每秒60帧则每秒钟应访问多少像素每个像素的访问时间至少是多少"></a> 2-3考虑分辨率为1024x768的光栅系统。若刷新速率为每秒60帧，则每秒钟应访问多少像素，每个像素的访问时间至少是多少?</h2><p>每秒访问的像素为：</p><pre><code>    1024×768×60= 47,185,920 个</code></pre><p>每个像素访问的时间为：</p><pre><code>    1/47185920 秒</code></pre><h2 id="2-4假设某真彩色-24位-rgb光栅系统有1024x768像素的帧缓冲器则该系统可以有多少种不同的彩色选择-强度级在任一时刻至多可以显示多少种不同的颜色"><a class="markdownIt-Anchor" href="#2-4假设某真彩色-24位-rgb光栅系统有1024x768像素的帧缓冲器则该系统可以有多少种不同的彩色选择-强度级在任一时刻至多可以显示多少种不同的颜色"></a> 2-4假设某真彩色 (24位) RGB光栅系统有1024x768像素的帧缓冲器，则该系统可以有多少种不同的彩色选择( 强度级)，在任一时刻至多可以显示多少种不同的颜色?</h2><p>在计算机中一个颜色可用24位的二进制表示，所以共有：</p><pre><code>    2^{24} =16,777,216 种 颜色</code></pre><p>计算机的每一个像素都可以显示颜色，按像素来说有：</p><pre><code>    1024×768=786,432 种 颜色</code></pre><p>按RGB来显示共有：</p><pre><code>    2^{24} =16,777,216 种 颜色</code></pre><p>最多可以显示<code>16,777,216</code>种颜色.</p><h2 id="2-5分辨率为-1024x768的高质量彩色系统32位至少需要多少mb帧缓冲器"><a class="markdownIt-Anchor" href="#2-5分辨率为-1024x768的高质量彩色系统32位至少需要多少mb帧缓冲器"></a> 2-5分辨率为 1024x768的高质量彩色系统(32位)至少需要多少MB帧缓冲器?</h2><p>一个像素有32位，则共有：</p><pre><code>    1024×768×32=25,165,824 位 </code></pre><p>又一个字节为8位，共有</p><pre><code>    25,165,824÷8÷1024÷1024=3 MB</code></pre><h2 id="2-6使用dda算法绘-制端点为56和1312的线段"><a class="markdownIt-Anchor" href="#2-6使用dda算法绘-制端点为56和1312的线段"></a> 2-6使用DDA算法绘 制端点为(5,6)和(13,12)的线段。</h2><pre><code>    已知：  Δx=8, Δy=6, m=0.75    则      x0=05,  y0=06           draw (05,06)            x1=06, y1=y0+m=06.75   draw (06,07)            x2=07, y2=y1+m=07.50draw (07,08)            x3=08, y3=y2+m=08.25 draw (08,08)            x4=09, y4=y2+m=09.00 draw (09,09)            x5=10, y5=y2+m=09.75 draw (10,10)            x6=11, y6=y2+m=10.50 draw (11,11)            x7=12, y7=y2+m=11.25 draw (12,11)             x8=13, y8=y2+m=12.00 draw (13,12)</code></pre><p><a href="https://gitee.com/chuyuxuan/tuc/raw/master/Computer_Graphics/1.png" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Computer_Graphics/1.png" class="lazyload"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="▶计算机图形学" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    
+      <category term="计算机图形学" scheme="https://chuyuxuan.xyz/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
   </entry>
   
