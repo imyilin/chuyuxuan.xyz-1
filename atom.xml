@@ -43,34 +43,6 @@
   </entry>
   
   <entry>
-    <title>一人抗下所有？</title>
-    <link href="https://chuyuxuan.xyz/2020/04/24/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/%E7%BB%88%E7%A9%B6%E4%B8%80%E4%BA%BA%E6%8A%97%E4%B8%8B%E6%89%80%E6%9C%89/"/>
-    <id>https://chuyuxuan.xyz/2020/04/24/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/%E7%BB%88%E7%A9%B6%E4%B8%80%E4%BA%BA%E6%8A%97%E4%B8%8B%E6%89%80%E6%9C%89/</id>
-    <published>2020-04-24T15:55:31.000Z</published>
-    <updated>2020-04-25T04:53:16.265Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>标题是觉得好玩而起的。最主要的是想吐槽而已。</p><h3 id="有点搞不懂"><a class="markdownIt-Anchor" href="#有点搞不懂"></a> 有点搞不懂</h3><p>才知道<code>罗志祥</code>的相关消息。<br>在B站刷网课摸鱼的时候，被系统推荐鬼畜视频<a href="https://www.bilibili.com/video/BV1W64y1M7GH?from=search&amp;seid=3073372644171283554" target="_blank" rel="noopener">穷开房</a>,我才打开手机里国际版微博(别问我为什么用国际版，谁用谁知道。)不知所云的吃起瓜来。我是真搞不懂，一个明星出轨，渣男等等。这些有什么好看的？还大有愈来愈严重的趋势，哦，不。是反复的在媒体上进行渲染。这让我又不得不想起了之前<code>王宝强</code>事件。啊，搞不懂，大家都是真无聊啊。（<s>我也挺无聊的居然关注这个来。</s>）学习什么的<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="咦？我怎么在摸鱼？" ontouchstart>它不香</span></span>么？<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/hematemesis.png" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/hematemesis.png" class="lazyload"></a></p><h3 id="什么是现实生活爱情的样子"><a class="markdownIt-Anchor" href="#什么是现实生活爱情的样子"></a> 什么是现实生活爱情的样子？</h3><p>旦总有的最近这个视频，我觉得拍的特别好。</p><iframe src="//player.bilibili.com/player.html?aid=967864470&bvid=BV1ap4y1X7Ro&cid=181777338&page=1" height="500" width="900" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe><p>父母吵吵闹闹这么多年了，也曾差点闹出人命，但现在却仍可以手挽手去广场散步，把我这儿子冷落在后头的吃着他们的狗粮。仍可以在情人节时往朋友圈疯狂的照片，给对方买小礼物。这些种种行为，令人酸酸得~<br><a href="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/139.gif" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/139.gif" class="lazyload"></a><br>这才是爱情在现实生活中的样子。</p><p>什么是生活的琐碎？</p><p>可以在叫你吃饭时没有理，而跑进你房间里把你的电脑电源关掉；可在你吃完饭后不收拾桌子而把你数落一顿，同时洗碗任务你没得跑；可以在你没有拖鞋就准备近门时而挡在门口不让你进去，你得乖乖的脱掉外面的鞋，换上她亲手缝的鞋才能进入房间。。。以上说的是我妈对我做的。当然在这里不是说我妈，而是在描述一种生活。</p><p><strong>一个普普通通的，凡人的生活。</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
-      
-    
-    </summary>
-    
-    
-      <category term="▶生活日常" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/"/>
-    
-    
-      <category term="随笔" scheme="https://chuyuxuan.xyz/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-      <category term="感慨" scheme="https://chuyuxuan.xyz/tags/%E6%84%9F%E6%85%A8/"/>
-    
-  </entry>
-  
-  <entry>
     <title>IEDA配置Tomcat创建web项目</title>
     <link href="https://chuyuxuan.xyz/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/"/>
     <id>https://chuyuxuan.xyz/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/</id>
@@ -303,7 +275,7 @@
     <published>2020-03-14T11:59:22.000Z</published>
     <updated>2020-05-08T12:45:04.655Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-kHLBeWMh" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="108254" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="300px" data-preload="auto" data-theme="#0000"></div><!-- 选项默认值描述id必须值歌曲 id / 播放列表 id / 相册 id / 搜索关键字server必须值音乐平台: netease, tencent, kugou, xiami, baidutype必须值song, playlist, album, search, artistfixedfalse开启固定模式minifalse开启迷你模式loopall列表循环模式：all, one,noneorderlist列表播放模式： list, randomvolume0.7播放器音量lrctype0歌词格式类型listfoldedfalse指定音乐播放列表是否折叠storagenamemetingjsLocalStorage 中存储播放器设定的键名autoplaytrue自动播放，移动端浏览器暂时不支持此功能mutextrue该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停listmaxheight340px播放列表的最大长度preloadauto音乐文件预载入模式，可选项： none, metadata, autotheme#ad7a86播放器风格色彩设置 --><h1 id="天外有飞仙"><a class="markdownIt-Anchor" href="#天外有飞仙"></a> 天外有飞仙</h1><p>夜来，习惯性的打开了网易云音乐，熟练的点开了今日推荐的歌单。默默地掏出耳机，小心翼翼的将耳塞塞在耳朵里，生怕带来不和谐的杂音让耳朵感觉到这个世界的&quot;嘈杂&quot;。</p><p>双手飞舞着敲打着作业代码，没错，音乐配代码，电脑旁边放着水杯，一切都是这么静逸，一切就像往常一样。</p><p>突然间耳朵里一首前奏，猛的唤起了我脑海里深处的记忆。这熟悉又陌生的感觉，是老林的<a href="https://music.163.com/#/song?id=108254" target="_blank" rel="noopener">一眼万年</a>。</p><p>思绪飘到了小时候。放学回家，写完作业，屁颠屁颠的找着老妈给遥控器，然后坐在电视机前，守着电视里放的天外飞仙。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" class="lazyload"></a></p><p>即使我那个时候看不懂。</p><p>小学生的我为董永不能和小七在一起而骂玉皇大帝是坏人，同时也迁怒二郎神这个小跟班，枉我还学他在额头上画一只眼睛。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" class="lazyload"></a></p><p>果然，小孩子眼里只有错与对，好与坏，单纯无邪。</p><p>有时候，看似那完美无缺的爱情，不得不败在这骨感的现实面前。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" class="lazyload"></a></p><p>你是仙人，而我只是一个凡人。仙人终究不能和凡人在一起的，仙人长生不老，而凡人，终究抵不过岁月消磨而老去。或许，老去的凡人是幸福的，因为它的爱人陪伴了它终生，亦或是痛苦的，因为在心爱之人前离去，剩下的，只有心爱之人的回忆。</p><p>古人终究是美好的，借用“转世”一说，续写了这凄美的爱情，歌颂着爱情。《狐妖小红娘》里的相思树，故若此吧。<br><a href="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" class="lazyload"></a></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>    <div id="aplayer-sZuMgdOe" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="108254" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="300px" data-preload="auto" data-theme="#0000"></div><!-- 选项默认值描述id必须值歌曲 id / 播放列表 id / 相册 id / 搜索关键字server必须值音乐平台: netease, tencent, kugou, xiami, baidutype必须值song, playlist, album, search, artistfixedfalse开启固定模式minifalse开启迷你模式loopall列表循环模式：all, one,noneorderlist列表播放模式： list, randomvolume0.7播放器音量lrctype0歌词格式类型listfoldedfalse指定音乐播放列表是否折叠storagenamemetingjsLocalStorage 中存储播放器设定的键名autoplaytrue自动播放，移动端浏览器暂时不支持此功能mutextrue该选项开启时，如果同页面有其他 aplayer 播放，该播放器会暂停listmaxheight340px播放列表的最大长度preloadauto音乐文件预载入模式，可选项： none, metadata, autotheme#ad7a86播放器风格色彩设置 --><h1 id="天外有飞仙"><a class="markdownIt-Anchor" href="#天外有飞仙"></a> 天外有飞仙</h1><p>夜来，习惯性的打开了网易云音乐，熟练的点开了今日推荐的歌单。默默地掏出耳机，小心翼翼的将耳塞塞在耳朵里，生怕带来不和谐的杂音让耳朵感觉到这个世界的&quot;嘈杂&quot;。</p><p>双手飞舞着敲打着作业代码，没错，音乐配代码，电脑旁边放着水杯，一切都是这么静逸，一切就像往常一样。</p><p>突然间耳朵里一首前奏，猛的唤起了我脑海里深处的记忆。这熟悉又陌生的感觉，是老林的<a href="https://music.163.com/#/song?id=108254" target="_blank" rel="noopener">一眼万年</a>。</p><p>思绪飘到了小时候。放学回家，写完作业，屁颠屁颠的找着老妈给遥控器，然后坐在电视机前，守着电视里放的天外飞仙。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-MHeuCO.jpg" class="lazyload"></a></p><p>即使我那个时候看不懂。</p><p>小学生的我为董永不能和小七在一起而骂玉皇大帝是坏人，同时也迁怒二郎神这个小跟班，枉我还学他在额头上画一只眼睛。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-03idAK.jpg" class="lazyload"></a></p><p>果然，小孩子眼里只有错与对，好与坏，单纯无邪。</p><p>有时候，看似那完美无缺的爱情，不得不败在这骨感的现实面前。</p><p><a href="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="http://newimg.mingxing.com/upload/attach/2015/11-02/294186-CQbggo.jpg" class="lazyload"></a></p><p>你是仙人，而我只是一个凡人。仙人终究不能和凡人在一起的，仙人长生不老，而凡人，终究抵不过岁月消磨而老去。或许，老去的凡人是幸福的，因为它的爱人陪伴了它终生，亦或是痛苦的，因为在心爱之人前离去，剩下的，只有心爱之人的回忆。</p><p>古人终究是美好的，借用“转世”一说，续写了这凄美的爱情，歌颂着爱情。《狐妖小红娘》里的相思树，故若此吧。<br><a href="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://img.zcool.cn/community/01d3e559ffcb03a801216a4b7f62b4.jpg@1280w_1l_2o_100sh.jpg" class="lazyload"></a></p>]]></content>
     
     <summary type="html">
     
@@ -567,6 +539,34 @@
     
     
       <category term="DNS" scheme="https://chuyuxuan.xyz/tags/DNS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>中国人失掉自信力了吗？</title>
+    <link href="https://chuyuxuan.xyz/2020/02/14/%E2%96%B6%E5%B0%8F%E8%AF%B4/%E9%B2%81%E8%BF%85%E7%B3%BB%E5%88%97/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%A4%B1%E6%8E%89%E8%87%AA%E4%BF%A1%E5%8A%9B%E4%BA%86%E5%90%97%EF%BC%9F/"/>
+    <id>https://chuyuxuan.xyz/2020/02/14/%E2%96%B6%E5%B0%8F%E8%AF%B4/%E9%B2%81%E8%BF%85%E7%B3%BB%E5%88%97/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%A4%B1%E6%8E%89%E8%87%AA%E4%BF%A1%E5%8A%9B%E4%BA%86%E5%90%97%EF%BC%9F/</id>
+    <published>2020-02-14T03:55:31.000Z</published>
+    <updated>2020-04-13T13:05:03.009Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 id="中国人失掉自信力了吗"><a class="markdownIt-Anchor" href="#中国人失掉自信力了吗"></a> 中国人失掉自信力了吗</h1><div class="note danger">            <p>从公开的文字上看起来：两年以前，我们总自夸着“地大物博”，是事实；不久就不再自夸了，只希望着国联，也是事实；现在是既不夸自己，也不信国联，改为一味求神拜佛，怀古伤今了——却也是事实。</p><p>于是有人慨叹曰：中国人失掉自信力了.</p><p>如果单据这一点现象而论，自信其实是早就失掉了的。先前信“地”，信“物”，后来信“国联”，都没有相信过“自己”。假使这也算一种“信”，那也只能说中国人曾经有过“他信力”，自从对国联失望之后，便把这他信力都失掉了。<br>失掉了他信力，就会疑，一个转身，也许能够只相信了自己，倒是一条新生路，但不幸的是逐渐玄虚起来了。信“地”和“物”，还是切实的东西，国联就渺茫，不过这还可以令人不久就省悟到依赖它的不可靠。一到求神拜佛，可就玄虚之至了，有益或是有害，一时就找不出分明的结果来，它可以令人更长久的麻醉着自己。</p><p>中国人现在是在发展着“自欺力”。</p><p>“自欺”也并非现在的新东西，现在只不过日见其明显，笼罩了一切罢了。然而，在这笼罩之下，我们有并不失掉自信力的中国人在。<br>我们从古以来，就有埋头苦干的人，有拼命硬干的人，有为民请命的人，有舍身求法的人，……虽是等于为帝王将相作家谱的所谓“正史”，也往往掩不住他们的光耀，这就是中国的脊梁。</p><p>这一类的人们，就是现在也何尝少呢？他们有确信，不自欺；他们在前仆后继的战斗，不过一面总在被摧残，被抹杀，消灭于黑暗中，不能为大家所知道罢了。说中国人失掉了自信力，用以指一部分人则可，倘若加于全体，那简直是诬蔑。</p><p>要论中国人，必须不被搽在表面的自欺欺人的脂粉所诓骗，却看看他的筋骨和脊梁。自信力的有无，状元宰相的文章是不足为据的，要自己去看地底下。</p><p>九月二十五日</p>          </div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text&amp;#x2F;css&quot; href=&quot;https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="▶小说" scheme="https://chuyuxuan.xyz/categories/%E2%96%B6%E5%B0%8F%E8%AF%B4/"/>
+    
+    
+      <category term="鲁迅" scheme="https://chuyuxuan.xyz/tags/%E9%B2%81%E8%BF%85/"/>
+    
+      <category term="中国人失掉自信力了吗" scheme="https://chuyuxuan.xyz/tags/%E4%B8%AD%E5%9B%BD%E4%BA%BA%E5%A4%B1%E6%8E%89%E8%87%AA%E4%BF%A1%E5%8A%9B%E4%BA%86%E5%90%97/"/>
     
   </entry>
   
