@@ -2003,7 +2003,6 @@ blockquote footer cite:before {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: #684436;
   content: '';
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
@@ -2046,11 +2045,11 @@ blockquote footer cite:before {
   width: 70px;
   height: 70px;
   border-radius: 35px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  transition: all 1.5s;
 }
 .flink .post-cards .md-links > .md-links-item a .md-links-title {
   overflow: hidden;
@@ -2114,7 +2113,6 @@ blockquote footer cite:before {
   position: relative;
   margin-bottom: 1rem;
   width: 100%;
-  background-color: #684436;
   background-attachment: local;
   background-position: center;
   -webkit-background-size: cover;
@@ -2193,6 +2191,7 @@ blockquote footer cite:before {
 }
 header {
   position: relative;
+  display: block;
 }
 #page-header {
   position: absolute;
@@ -2370,10 +2369,13 @@ header {
 }
 @media screen and (min-width: 768px) {
   #site-title {
-    font-size: 2rem;
+    font-size: 3rem;
+    text-shadow: -0.06em 0 #f00, 0.06em 0 #0ff;
+    color: #666 hf;
   }
   #site-sub-title {
     font-size: 1.2rem;
+    text-shadow: -0.06em 0 #f00, 0.06em 0 #0ff;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2411,7 +2413,6 @@ header {
   top: 0;
   right: -254px;
   z-index: 103;
-  display: block;
   overflow-y: scroll;
   width: 250px;
   height: 100%;
@@ -2718,9 +2719,9 @@ header {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
-  opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
 }
 #recent-posts {
   width: 75%;
@@ -2767,6 +2768,7 @@ header {
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+  display: block;
 }
 #recent-posts > .recent-post-item .left_radius {
   border-radius: 8px 0 0 8px;
@@ -3293,12 +3295,6 @@ header {
   position: relative;
   margin-bottom: 1rem;
   height: 19rem;
-  background-color: #684436;
-  background-attachment: local;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
 }
 #top-container:before {
   position: absolute;
@@ -3675,6 +3671,9 @@ img {
   max-width: 1000px;
   border-radius: 8px;
   background: #fff;
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
   -webkit-box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   box-shadow: 0 4px 8px 6px rgba(7,17,27,0.06);
   -webkit-transition: all 0.3s;
