@@ -1990,11 +1990,11 @@ blockquote footer cite:before {
   transform: perspective(1px) translateZ(0);
 }
 .flink .post-cards .md-links > .md-links-item:hover img {
-  -webkit-transform: rotate(540deg);
-  -moz-transform: rotate(540deg);
-  -o-transform: rotate(540deg);
-  -ms-transform: rotate(540deg);
-  transform: rotate(540deg);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 .flink .post-cards .md-links > .md-links-item:before {
   position: absolute;
@@ -2088,12 +2088,6 @@ blockquote footer cite:before {
 #footer {
   position: relative;
   margin-top: 1rem;
-  background: #684436;
-  background-attachment: local;
-  background-position: bottom;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
 }
 #footer-wrap {
   position: relative;
@@ -2209,9 +2203,9 @@ header {
   height: 58px;
   border: none;
   font-size: 18px;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -2724,6 +2718,9 @@ header {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
 }
 #recent-posts {
   width: 75%;
@@ -4310,9 +4307,9 @@ img {
   background: #f6f8fa;
   -webkit-box-shadow: -0.25rem 0 0.25rem rgba(232,237,250,0.6) inset;
   box-shadow: -0.25rem 0 0.25rem rgba(232,237,250,0.6) inset;
-  opacity: 0.9;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
-  filter: alpha(opacity=90);
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
   -webkit-transition: ease-in-out 0.4s;
   -moz-transition: ease-in-out 0.4s;
   -o-transition: ease-in-out 0.4s;
