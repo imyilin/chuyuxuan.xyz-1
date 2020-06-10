@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"><title>无言 | CHUYUXUAN</title><meta name="description" content="无言"><meta name="keywords" content="随笔"><meta name="author" content="CHUYUXUAN"><meta name="copyright" content="CHUYUXUAN"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon2.ico"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="https://hm.baidu.com"><link rel="preconnect" href="http://ta.qq.com"><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin><link rel="preconnect" href="//busuanzi.ibruce.info"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="无言"><meta name="twitter:description" content="无言"><meta name="twitter:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/e61e0a449d8dc675cd1f0bea3a24680a.jpg"><meta property="og:type" content="article"><meta property="og:title" content="无言"><meta property="og:url" content="https://chuyuxuan.xyz/2020/05/08/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/2020%E5%B9%B45%E6%9C%888%E6%97%A5/"><meta property="og:site_name" content="CHUYUXUAN"><meta property="og:description" content="无言"><meta property="og:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/e61e0a449d8dc675cd1f0bea3a24680a.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://cdn.jsdelivr.net/npm/js-cookie/dist/js.cookie.min.js"></script><script>const autoChangeMode = 'false'
+var t = Cookies.get("theme");
+if (autoChangeMode == '1'){
+const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches
+const isLightMode = window.matchMedia("(prefers-color-scheme: light)").matches
+const isNotSpecified = window.matchMedia("(prefers-color-scheme: no-preference)").matches
+const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+if (t === undefined){
+  if (isLightMode) activateLightMode()
+  else if (isDarkMode) activateDarkMode()
+  else if (isNotSpecified || hasNoSupport){
+    console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+    now = new Date();
+    hour = now.getHours();
+    isNight = hour < 6 || hour >= 18
+    isNight ? activateDarkMode() : activateLightMode()
+}
+} else if (t == 'light') activateLightMode()
+else activateDarkMode()
+
+
+} else if (autoChangeMode == '2'){
+  now = new Date();
+  hour = now.getHours();
+  isNight = hour < 6 || hour >= 18
+  if(t === undefined) isNight? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode() 
+} else {
+  if ( t == 'dark' ) activateDarkMode()
+  else if ( t == 'light') activateLightMode()
+}
+
+function activateDarkMode(){
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+    document.querySelector('meta[name="theme-color"]').setAttribute('content','#000')
+  }
+}
+function activateLightMode(){
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null){
+  document.querySelector('meta[name="theme-color"]').setAttribute('content','#fff')
+  }
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><link rel="canonical" href="https://chuyuxuan.xyz/2020/05/08/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/2020%E5%B9%B45%E6%9C%888%E6%97%A5/"><link rel="prev" title="Linux 安装 nginx" href="https://chuyuxuan.xyz/2020/05/15/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/linux%E9%83%A8%E7%BD%B2nginx/"><link rel="next" title="IEDA配置Tomcat创建web项目" href="https://chuyuxuan.xyz/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6af004bb354c28578bb066736f9d6ce5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script src="http://tajs.qq.com/stats?sId=66514140" charset="UTF-8"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&amp;effect=shadow-multiple|3d-float"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: 'Snackbar.bookmark.title',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天',
+  runtime: true,
+  copyright: {"languages":{"author":"作者: CHUYUXUAN","link":"链接: https://chuyuxuan.xyz/2020/05/08/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/2020%E5%B9%B45%E6%9C%888%E6%97%A5/","source":"来源: CHUYUXUAN","info":"著作权归源作者所有，转载请注明出处。"}},
+  ClickShowText: undefined,
+  medium_zoom: true,
+  fancybox: true,
+  Snackbar: {"bookmark":{"title":"Snackbar.bookmark.title","message_prev":"按","message_next":"键将本页加入书签"},"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#FFC1C1","bgDark":"#2d3035","position":"bottom-left"},
+  baiduPush: false,
+  isHome: false,
+  isPost: true
+  
+}</script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="CHUYUXUAN" type="application/atom+xml">
+</head><body><header> <div id="page-header"><span class="pull_left" id="blog_name"><a class="blog_title" id="site-name" href="/">CHUYUXUAN</a></span><span class="toggle-menu pull_right close"><a class="site-page"><i class="fa fa-bars fa-fw" aria-hidden="true"></i></a></span><span class="pull_right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/wuhan/"><i class="fa-fw fa fa-plus-circle"></i><span> 疫情相关</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于&amp;留言</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fa fa-file-text-o"></i><span> 个人简历</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 更多</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fa fa-file-image-o"></i><span> 图片</span></a></li></ul></div></div></span><span class="pull_right" id="search_button"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div></header><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">44</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">55</div></a></div></div><div class="mobile_data_item is-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">8</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/wuhan/"><i class="fa-fw fa fa-plus-circle"></i><span> 疫情相关</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于&amp;留言</span></a></div><div class="menus_item"><a class="site-page" href="/resume/"><i class="fa-fw fa fa-file-text-o"></i><span> 个人简历</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fa fa-list" aria-hidden="true"></i><span> 更多</span><i class="fa fa-chevron-down menus-expand" aria-hidden="true"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 视频</span></a></li><li><a class="site-page" href="/photos/"><i class="fa-fw fa fa-file-image-o"></i><span> 图片</span></a></li></ul></div></div></div><div id="mobile-sidebar-toc"><div class="toc_mobile_headline">目录</div><div class="sidebar-toc__content"><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#脑子抽了"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text"> 脑子抽了</span></a></li></ol></div></div></div><div id="body-wrap"><div id="web_bg" data-type="photo"></div><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true">     </i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#脑子抽了"><span class="toc-number">1.</span> <span class="toc-text"> 脑子抽了</span></a></li></ol></div></div></div><main id="content-outer"><div id="top-container" style="background-image: url(https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/e61e0a449d8dc675cd1f0bea3a24680a.jpg)"><div id="post-info"><div id="post-title"><div class="posttitle">无言</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 发表于 2020-05-08<span class="post-meta__separator">|</span><i class="fa fa-history fa-fw" aria-hidden="true"></i> 更新于 2020-05-27</time><span class="post-meta__separator">|</span><span><i class="fa fa-inbox post-meta__icon fa-fw" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/">▶生活日常</a></span><div class="post-meta-wordcount"><div class="post-meta-pv-cv"><span><i class="fa fa-eye post-meta__icon fa-fw" aria-hidden="true"> </i>阅读量:</span><span id="busuanzi_value_page_pv"></span><span class="post-meta__separator">|</span><i class="fa fa-comments-o post-meta__icon fa-fw" aria-hidden="true"></i><span>评论数:</span><a href="/2020/05/08/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/2020%E5%B9%B45%E6%9C%888%E6%97%A5/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count comment-count" data-xid="/2020/05/08/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/2020%E5%B9%B45%E6%9C%888%E6%97%A5/" itemprop="commentCount"></span></a></div></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.2.1/css/hint.min.css"><h2 id="脑子抽了"><a class="markdownIt-Anchor" href="#脑子抽了"></a> 脑子抽了</h2>
+<p>从4月上旬开始，突然整个人就有一种慌乱的感觉，总觉得自己什么东西都不会，走上社会将会面临着找不到工作，然后就直接失业。这是我害怕的，我害怕一毕业就失业，害怕一毕业就什么都没了，害怕自己不能养活自己，自己不能得到自己想要的生活。</p>
+<p>开学就大四了，身边的朋友都在准备考研了，而我还在这里犹犹豫豫、恍恍惚惚的过着日子，消磨这大学里的最后一点时光。是的，这突入起来的疫情导致自己一些想法被迫改变。自己是一个<code>插班生</code>，真的，我真的很自卑，碰到本部的一些同学心理自卑到骨子里头，虽然我和他们谈论时脸上都是笑嘻嘻的，虽然这些同学并没有把我区别对待。唉。<span style="border-bottom: 1px dashed #389fff;"><span class="hint--top hint--rounded hint--info" aria-label="在前女友面前我也有这样的感觉，自己配不上她。至于之后分手了那是后话了" ontouchstart>唉。</span></span></p>
+<p>想要改变自己，就得提升自我水平。给自己定了一个很绝的高度（打了我自己之前的<a href="https://chuyuxuan.xyz/2020/01/01/%E2%96%B6%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/2020/">脸</a>）。上海的一所大学。今年的复试线是327，历年平均线算下来是325.那么，我自己要想达到这样的水平，自己分割一下成绩，也就是</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">政治（100）</th>
+<th style="text-align:center">英语（100）</th>
+<th style="text-align:center">数一（150）</th>
+<th style="text-align:center">专业（150）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">60-65</td>
+<td style="text-align:center">45-50</td>
+<td style="text-align:center">100-110</td>
+<td style="text-align:center">120-135</td>
+</tr>
+</tbody>
+</table>
+<p>总分在<code>325~360</code>这个区间内才有机会。看到<a href="https://tomotoes.com/blog/no-sense/" target="_blank" rel="noopener">番茄大佬</a>想冲刺一下<code>吉林大学</code>，我又觉得自己可以了。<br>
+其实考本校要简单的多，本校的计算机在湖南也挺厉害的。自己打算毕业了之后就在长沙工作。但自己骨子里又有一种莫名的冲劲，觉得自己还可以再冲一冲，冲进自己理想的高度。</p>
+<p>和大佬一样，总有这种感觉，老是喜欢沉浸在回忆里，要是当初怎么怎么样就好了。。呵呵呵，道理都懂，就是抵触不了大脑的瞎想，自制力太差太差。假如回到学校，一群室友嘻嘻哈哈的，自己估计也会被他们带偏。目前自己越来越像高考那段时间研究起自己的分数来，然而最终结果是没能达到自己想要达到的高度，整天太神经兮兮了。现在我不知道自己到底是个什么水平。</p>
+<p>这样吧，给自己立了个flag，在5月31号，完成以下，必须完成。否则我这个傻逼样子根本就无法考研。</p>
+<div class="note success">
+            <p>1.考研单词《红宝书》背诵到<code>1000</code>词。 现在已经完成了将近<code>200</code>了.能提早完成就提早完成，后面还要复习巩固。<br>2.考研数学仔细复习到<code>多元微分学</code>。 跟着李老师来的，努力把自己提高到想要的分数。<br>3.完成《660》题目，学到哪做到哪。<br>4.体重到69kg。要运动，不然自己又胖了，现在BMI还没到22，怎么谈健康？</p>
+          </div>
+<p>不给自己立太多的flag，要一步一步来，5月31号的自己，你看到这里了吧？一定！一定! 全部完成了！爱你！<strong>这不是头脑发热！孩子！</strong></p>
+</div></article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9A%8F%E7%AC%94/">随笔    </a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/e61e0a449d8dc675cd1f0bea3a24680a.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-button button--primary button--animated"> <i class="fa fa-qrcode"></i> 赏饭钱<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/wechat.png" alt="wechat"><div class="post-qr-code__desc">wechat</div></li><li class="reward-item"><img class="lazyload post-qr-code__img" src="/img/aliplay.png" alt="alipay"><div class="post-qr-code__desc">alipay</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull_left"><a href="/2020/05/15/%E2%96%B6%E5%90%8E%E7%AB%AF/Linux/linux%E9%83%A8%E7%BD%B2nginx/"><img class="prev_cover lazyload" data-src="https://gitee.com/chuyuxuan/tuc/raw/master/linux/122.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Linux 安装 nginx</span></div></a></div><div class="next-post pull_right"><a href="/2020/04/15/%E2%96%B6%E5%89%8D%E7%AB%AF/javaWeb/%E8%AE%B0%E5%BD%95IEDA%E9%85%8D%E7%BD%AE/"><img class="next_cover lazyload" data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Java_web/cover.png" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>IEDA配置Tomcat创建web项目</span></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fa fa-fw fa-thumbs-up" aria-hidden="true"></i><span> 相关推荐</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/2020/03/14/▶生活日常/天外飞/" title="天外有飞仙"><img class="relatedPosts_cover lazyload"data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/152838gb333o3ku6k7xa0u.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-03-14</div><div class="relatedPosts_title">天外有飞仙</div></div></a></div><div class="relatedPosts_item"><a href="/2020/02/26/▶生活日常/感慨一下/" title="日常感慨"><img class="relatedPosts_cover lazyload"data-src="https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/152837ui4ngaa9aborr3zh.jpg"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="fa fa-calendar fa-fw" aria-hidden="true"></i> 2020-02-26</div><div class="relatedPosts_title">日常感慨</div></div></a></div></div><div class="clear_both"></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = true == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'4VHYBgLfdjw6zhs1Ep46acMw-gzGzoHsz',
+  appKey:'t4eW4wzuDJuIU1McV0Ir9Dzq',
+  placeholder:'输入邮箱可以得到精准回复😛~',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'8',
+  lang:'zh-cn',
+  recordIP: true
+});</script></div></div></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2020 By CHUYUXUAN</div><div class="framework-info"><span>Driven </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div><div class="icp"><a href="http://www.beian.miit.gov.cn/" target="_blank" rel="noopener"><img class="icp-icon" src="/img/icp.png"><span>湘ICP备20007944号</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><i class="fa fa-book" id="readmode" title="阅读模式"></i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换" target="_self">繁</a><i class="darkmode fa fa-moon-o" id="darkmode" title="夜间模式"></i></div><div id="rightside-config-show"><div id="rightside_config" title="设置"><i class="fa fa-cog" aria-hidden="true"></i></div><a id="to_comment" href="#post-comment" title="直达评论"><i class="scroll_to_comment fa fa-comments">  </i></a><i class="fa fa-list-ul close" id="mobile-toc-button" title="目录" aria-hidden="true"></i><i class="fa fa-arrow-up" id="go-up" title="回到顶部" aria-hidden="true"></i></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@latest/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@latest/lazysizes.min.js" async=""></script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" target="_blank" rel="noopener" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
